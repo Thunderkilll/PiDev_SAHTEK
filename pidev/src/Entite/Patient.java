@@ -98,6 +98,14 @@ public class Patient {
         this.image = image;
     }
 
+    public Patient(String nom, String prenom, String password, String image) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.password = password;
+        this.image = image;
+    }
+
+    
     public Patient() {
         cin = 0 ;
         nom="chindoul";

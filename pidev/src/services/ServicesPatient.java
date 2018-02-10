@@ -12,6 +12,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -24,6 +25,29 @@ public class ServicesPatient implements Iservices.IservicesPatient{
     @Override
     public void ajouter_Patient(Patient p) {
        //**********************************Ajout Methode 1 *************
+                    try {
+                       
+            Statement stm= db.createStatement();
+            String query = "insert into patient (nom, prenom ,date_naissance ,password, image) values ('" +p.getNom()+"','"+p.getPrenom()+"','"+p.getDate_naissance()+"','"+p.getPassword()+"',"+p.getImage()+"')";
+            stm.executeUpdate(query);
+            System.out.println("ajout ok");
+        } catch (SQLException ex) {
+            System.out.println("Ajout failed "+ex);
+         }
+   
+    }
+       public void ajouter_Patient2(Patient p) {
+       //**********************************Ajout Methode 1 *************
+                    try {
+                       
+            Statement stm= db.createStatement();
+            String query = "insert into patient (cin,nom, prenom ,date_naissance ,password, image) values ('"+p.getCin()+ "','" +p.getNom()+"','"+p.getPrenom()+"','"+p.getDate_naissance()+"','"+p.getPassword()+"',"+p.getImage()+"')";
+            stm.executeUpdate(query);
+            System.out.println("ajout ok");
+        } catch (SQLException ex) {
+            System.out.println("Ajout failed "+ex);
+         }
+   
     }
       @Override
     public void ajouter_Patient_Elts(String nom, String prenom, Date date_naissance, String password, String image) {
