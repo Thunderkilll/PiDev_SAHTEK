@@ -12,6 +12,9 @@ import java.sql.Date;
  * @author khaled22
  */
 public class Patient {
+    
+    
+    
         private int cin ;
     private String nom ;
     private String prenom ;
