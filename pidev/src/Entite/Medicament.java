@@ -14,7 +14,7 @@ import java.util.List;
 public class Medicament {
      private int id_medicament;
     private String nom_medicament;
-    private double prix;
+    private double prixx;
     private String nom_labo;
     
     
