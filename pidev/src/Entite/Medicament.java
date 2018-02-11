@@ -20,6 +20,9 @@ public class Medicament {
     
     
     
+    
+    
+    
     public Medicament(int id_medicament, String nom_medicament,double prix, String nom_labo){
         this.id_medicament=id_medicament;
         this.nom_medicament=nom_medicament;
