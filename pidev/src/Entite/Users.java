@@ -21,6 +21,9 @@ public class Users {
     private int id_centre ;        private int id_pharmacie;
     private  String user;          private static Users connectUser;
 
+    
+    
+    
            //user type 1 : patient or normal user centre de notre projet 
     public Users(int cin, String nom, String prenom, String email, String adresse, String password, Date dateNaissance, int telephone, String username, String user) {   
         this.cin = cin;
