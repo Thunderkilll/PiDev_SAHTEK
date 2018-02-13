@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package Iservices;
-import Entite.Medicament;
+//import Entite.Medicament;
 /**
  *
  * @author lafa
  */
 public interface IservicesMedicament {
-  public  void ajouterMedicament(Medicament m);
-    public void supprimerMedicament(Medicament m);
-    public  Medicament chercherMedicament(int id_medicament);
-     public void afficherMedicament(Medicament m);
-    public void modifierMedicament(Medicament m, String nom_medicament);
+//  public  void ajouterMedicament(Medicament m);
+//    public void supprimerMedicament(Medicament m);
+//    public  Medicament chercherMedicament(int id_medicament);
+//     public void afficherMedicament(Medicament m);
+//    public void modifierMedicament(Medicament m, String nom_medicament);
     
 }
