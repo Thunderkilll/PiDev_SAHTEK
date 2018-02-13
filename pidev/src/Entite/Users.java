@@ -9,7 +9,7 @@ import java.sql.Date;
 
 /**
  *
- * @author khaled22
+ 
  */
 public class Users {
     private int id_usr ;           private int cin ;
@@ -21,6 +21,9 @@ public class Users {
     private int id_centre ;        private int id_pharmacie;
     private  String user;          private static Users connectUser;
 
+    
+    
+    
            //user type 1 : patient or normal user centre de notre projet 
     public Users(int cin, String nom, String prenom, String email, String adresse, String password, Date dateNaissance, int telephone, String username, String user) {   
         this.cin = cin;
@@ -53,7 +56,23 @@ public class Users {
         this.id_pharmacie = id_pharmacie;
         this.user = user;
     }
+//  user type 4 : prop centre 
 
+    public Users(int cin, String nom, String prenom, String email, String adresse, String password, Date dateNaissance, int telephone, String username, int id_centre, String user) {
+        this.cin = cin;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.adresse = adresse;
+        this.password = password;
+        this.dateNaissance = dateNaissance;
+        this.telephone = telephone;
+        this.username = username;
+        this.id_centre = id_centre;
+        this.user = user;
+    }
+    
+    
     //constructeur par default :
     public Users() {    
     }
