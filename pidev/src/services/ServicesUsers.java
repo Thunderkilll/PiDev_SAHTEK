@@ -18,7 +18,7 @@ import java.sql.SQLException;
  * @author khaled22
  */
 public class ServicesUsers implements InterfaceUsers{
-       Connection con =MyConnection.getInstance().getCon(); ;
+       Connection con =MyConnection.getInstance().getCon();
        public static InterfaceUsers service ;
    
     public static InterfaceUsers getInstance(){
@@ -33,7 +33,7 @@ public class ServicesUsers implements InterfaceUsers{
 
 
     @Override
-    public void verifierLogin(Users u) {
+    public boolean verifierLogin(Users u) {
                 String req="SELECT email,password FROM users WHERE email=? and password=? ;";
          try {
         PreparedStatement ps=con.prepareStatement(req);
@@ -50,11 +50,15 @@ public class ServicesUsers implements InterfaceUsers{
               //  System.out.println(s1+s2);
              }
         System.out.println("conexion validé");
+        return true ;
          } catch (SQLException ex) {
             
              System.out.println("\nconnexion didn't pass "+ex);
         }
+    
+    return false;
     }
+    
 
     @Override
     public void addPatient(Users u) {
@@ -144,8 +148,8 @@ public class ServicesUsers implements InterfaceUsers{
     @Override
     public void addPropCentre(Users u) {
        String requete ="insert into users (username,nom,prenom,date_naissance,cin,email,password,telephone,"
-                + "adresse,user,num_carte_serv , id_centre) "
-                + " values (?,?,?,?,?,?,?,?,?,?,?,?);";
+                + "adresse,user, id_centre) "
+                + " values (?,?,?,?,?,?,?,?,?,?,?);";
         
         try{
                    
@@ -157,7 +161,7 @@ public class ServicesUsers implements InterfaceUsers{
         ps.setString(6, u.getEmail());                                ps.setString(7, u.getPassword());
         ps.setDate(4,u.getDateNaissance() );                          ps.setInt(8, u.getTelephone());
         ps.setString(10, u.getUser());                                ps.setString(9, u.getAdresse());
-        ps.setInt(11, u.getNum_carte_serv());                         ps.setInt(12, u.getId_centre());
+                              ps.setInt(11, u.getId_centre());
         
         ps.executeUpdate();
         System.out.println("user ajouter Type : Pharmacien");
@@ -168,19 +172,6 @@ public class ServicesUsers implements InterfaceUsers{
         }
        
     }
-/*  try {
-               Connection db = MyConnection.getInstance().getCon();
-            
-        String sql = "UPDATE users  SET  `id_usr`= 2 WHERE cin= '"+p2.getCin()+"';";
-      
-           PreparedStatement ste = db.prepareStatement(sql);
-           ste.executeUpdate();
-           System.out.println("update done ");
-          }
-          catch(SQLException ex){
-              
-              System.out.println("update failed \n"+ex);
-          }*/
-    
+
     
 }
