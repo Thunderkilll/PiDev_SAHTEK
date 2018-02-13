@@ -16,6 +16,7 @@ public class Medicament {
     private String nom_medicament;
     private double prix;
     private String nom_labo;
+   
     
     
     
@@ -25,6 +26,7 @@ public class Medicament {
         this.nom_medicament=nom_medicament;
         this.prix =prix;
         this.nom_labo=nom_labo;
+        
     }
 
     public Medicament() {
@@ -61,13 +63,16 @@ public class Medicament {
     public void setPrix(double prix) {
         this.prix = prix;
     }
-    
+
+   
 
     @Override
     public String toString() {
-        return "Servicesmedicament{" + "id_medicament=" + id_medicament + ", nom_medicament=" + nom_medicament + '}';
+        return "Medicament{" + "id_medicament=" + id_medicament + ", nom_medicament=" + nom_medicament + ", prix=" + prix + ", nom_labo=" + nom_labo + '}';
     }
+    
 
+   
    
     
 }
