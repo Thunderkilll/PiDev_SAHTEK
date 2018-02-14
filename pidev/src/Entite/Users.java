@@ -12,6 +12,7 @@ import java.sql.Date;
  
  */
 public class Users {
+    
     private int id_usr ;           private int cin ;
     private String nom ;           private String prenom ;
     private String email ;         private String adresse ;
@@ -75,18 +76,18 @@ public class Users {
     
     //constructeur par default :
     public Users() {    
-    }
+                }
 
     //Login  du users :
-//    public Users(String password, String username) {
-//        this.password = password;
-//        this.username = username;
-//    }
+    public Users(String password, String username) {
+        this.password = password;
+        this.username = username;
+   }
 
     //getters et setters
     public int getCin() {
         return cin;
-    }                public void setCin(int cin) {
+    }                   public void setCin(int cin) {
         this.cin = cin;
     }
        
@@ -122,7 +123,7 @@ public class Users {
     
     public Date getDateNaissance() {
         return dateNaissance;
-    }      public void setDateNaissance(Date dateNaissance) {
+    }        public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
@@ -172,6 +173,12 @@ public class Users {
         return connectUser;
     }  public static void setConnectUser(Users connectUser) {
         Users.connectUser = connectUser;
+    }
+
+    public int getId_usr() {
+        return id_usr;
+    }                public void setId_usr(int id_usr) {
+        this.id_usr = id_usr;
     }
 
     @Override

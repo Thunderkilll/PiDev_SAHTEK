@@ -6,12 +6,9 @@
 package pidev;
 
 import DB.MyConnection;
-import Entite.Medicament;
-import Entite.Pharmacie;
+
 import java.sql.Connection;
 import java.sql.Date;
-import services.ServicesMedicament;
-import services.Servicespharmacie;
 
 /**
  *
@@ -25,8 +22,8 @@ public class Pidev {
     public static void main(String[] args) {
         // TODO code application logic here
        MyConnection.getInstance() ;
-      Servicespharmacie sp = new Servicespharmacie();
-      ServicesMedicament sm = new ServicesMedicament() ;
+//      Servicespharmacie sp = new Servicespharmacie();
+//      ServicesMedicament sm = new ServicesMedicament() ;
       
       //Pharmacie p1 = new Pharmacie(10,"nn11","sfgj@address00",1254582,1566,new java.sql.Date(2015-1900,5,8));
       //Pharmacie p2 = new Pharmacie(11,"nn21","sfgj@address0",25547822,2008,new java.sql.Date(2028-1900,5,8));
@@ -50,13 +47,13 @@ public class Pidev {
         
         
         
-        Medicament m1 = new Medicament(233,"maxilase",233,"dhgcbcc");
-        Medicament m2=new Medicament(343,"aspegique",33.2,"elissa");
-        Medicament m3=new Medicament(152,"gjhjhgj,",23.2,"yassemine");
-        Medicament m4=new Medicament(131,"fgxjhnvl",22.3,"cnjhku");
-        
-        //sm.ajouterMedicament(m2);
-        sm.ajouterMedicament(m1);
+//        Medicament m1 = new Medicament(233,"maxilase",233,"dhgcbcc");
+//        Medicament m2=new Medicament(343,"aspegique",33.2,"elissa");
+//        Medicament m3=new Medicament(152,"gjhjhgj,",23.2,"yassemine");
+//        Medicament m4=new Medicament(131,"fgxjhnvl",22.3,"cnjhku");
+//        
+//        //sm.ajouterMedicament(m2);
+//        sm.ajouterMedicament(m1);
         //sm.ajouterMedicament(m3);
        // sm.ajouterMedicament(m4);
        //sm.afficherMedicament(m4);
