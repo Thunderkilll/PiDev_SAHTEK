@@ -5,14 +5,10 @@
  */
 package Entite;
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< master
+
 import java.util.ArrayList;
 
-=======
->>>>>>> ajouter mes classe
->>>>>>> Stashed changes
+
 /**
  *
  * @author lafa
@@ -20,26 +16,20 @@ import java.util.ArrayList;
 public class Categorie {
    private int id_categorie;
    private String nom_categorie;
-<<<<<<< Updated upstream
-=======
-<<<<<<< master
+
    ArrayList<Medicament> medicament ;
-=======
->>>>>>> ajouter mes classe
->>>>>>> Stashed changes
+
     
 
     public Categorie(int id_categorie, String nom_categorie) {
         this.id_categorie = id_categorie;
         this.nom_categorie = nom_categorie;
-<<<<<<< Updated upstream
     }
 
     public Categorie() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-=======
-<<<<<<< master
+
         medicament =new ArrayList<>();
     }
 
@@ -51,8 +41,6 @@ public class Categorie {
     public Categorie() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
->>>>>>> ajouter mes classe
->>>>>>> Stashed changes
 
     public int getId_categorie() {
         return id_categorie;
