@@ -13,10 +13,10 @@ import Entite.Users;
  */
 public interface InterfaceUsers {
     
-     public void verifierLogin(Users u);
-     public void addPatient( Users u);
-     public void addMedecin( Users u);
-     public void addPharmacien( Users u);
-     public void addPropCentre( Users u);
+     public boolean verifierLogin(Users u);
+     public void    addPatient( Users u);
+     public void    addMedecin( Users u);
+     public void    addPharmacien( Users u);
+     public void    addPropCentre( Users u);
     
 }
