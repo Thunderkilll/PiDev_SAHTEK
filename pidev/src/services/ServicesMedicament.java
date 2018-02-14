@@ -74,7 +74,15 @@ public class ServicesMedicament implements Iservices.IservicesMedicament{
         try
         {
        
+<<<<<<< Updated upstream
         String select = "SELECT * FROM medicament WHERE nom_medicament = '"+nom_medicament+"' ";
+=======
+<<<<<<< master
+        String select = "SELECT * FROM categorie_medicament WHERE nom_categorie = '"+nom_medicament+"' ";
+=======
+        String select = "SELECT * FROM medicament WHERE nom_medicament = '"+nom_medicament+"' ";
+>>>>>>> ajouter mes classe
+>>>>>>> Stashed changes
         Statement statement1 = conn.createStatement();
         ResultSet result = statement1.executeQuery(select);
       

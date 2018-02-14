@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package Iservices;
+<<<<<<< Updated upstream
+=======
+<<<<<<< master
+<<<<<<< HEAD
+=======
+>>>>>>> ajouter mes classe
+>>>>>>> Stashed changes
 import Entite.Categorie;
 import Entite.Medicament;
 /**
@@ -11,6 +18,13 @@ import Entite.Medicament;
  * @author lafa
  */
 public interface IservicesMedicament {
+<<<<<<< Updated upstream
+=======
+<<<<<<< master
+<<<<<<< HEAD
+=======
+>>>>>>> ajouter mes classe
+>>>>>>> Stashed changes
   public  void ajouterMedicament(Medicament m, Categorie c);
     public void supprimerMedicament(Medicament m);
     public  Medicament chercherMedicament(String nom_medicament);

@@ -16,6 +16,11 @@ public class Medicament {
     private String nom_medicament;
     private double prix;
     private String nom_labo;
+<<<<<<< Updated upstream
+=======
+   
+    
+>>>>>>> Stashed changes
    
     
     
