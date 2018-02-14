@@ -64,7 +64,8 @@ public class Pidev {
       // m0=sm.chercherMedicament(131);
        //System.out.println(m0.toString());
        //sm.modifierMedicament(m3,"gkjhb");
-      // sm.supprimerMedicament(m1);
+      //sm.supprimerMedicament(m1);
+     // sm.ajouterMedicament(m4);
        
         
         

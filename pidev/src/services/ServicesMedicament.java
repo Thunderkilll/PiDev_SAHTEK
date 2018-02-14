@@ -6,6 +6,7 @@
 package services;
 
 import DB.MyConnection;
+import Entite.Categorie;
 import Entite.Medicament;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,19 +27,18 @@ public class ServicesMedicament implements Iservices.IservicesMedicament{
    Connection conn=  MyConnection.getInstance().getCon(); 
     
     @Override
-    public void ajouterMedicament(Medicament m) {
+    public void ajouterMedicament(Medicament m ,Categorie c) {
          try 
         {
-            String insert = "INSERT INTO medicament (id_medicament,nom_medicament ,prix, nom_labo) VALUES (?,?,?,?)";
+            String insert = "INSERT INTO medicament (nom_medicament ,prix, nom_labo,id_categorie) VALUES (?,?,?,?,?)";
             PreparedStatement st1 = conn.prepareStatement(insert);
             st1.setInt(1, m.getId_medicament());
             st1.setString(2, m.getNom_medicament());
             st1.setDouble(3, m.getPrix());
             st1.setString(4, m.getNom_labo());
+            st1.setInt(5, c.getId_categorie());
+           
             
-           
-           
-           
             st1.executeUpdate();
             System.out.println("medicament"+m.getId_medicament()+" ajoutée !!!");
             
@@ -68,13 +68,13 @@ public class ServicesMedicament implements Iservices.IservicesMedicament{
 
 
     @Override
-    public Medicament chercherMedicament( int id_medicament) {
+    public Medicament chercherMedicament( String nom_medicament) {
         
         Medicament o = new Medicament();
         try
         {
        
-        String select = "SELECT * FROM medicament WHERE id_medicament = '"+id_medicament+"' ";
+        String select = "SELECT * FROM medicament WHERE nom_medicament = '"+nom_medicament+"' ";
         Statement statement1 = conn.createStatement();
         ResultSet result = statement1.executeQuery(select);
       
@@ -85,6 +85,7 @@ public class ServicesMedicament implements Iservices.IservicesMedicament{
             o.setNom_medicament(result.getString("nom_medicament"));
              o.setPrix(result.getDouble("prix"));
             o.setNom_labo(result.getString("nom_labo"));
+           
                
            // m.setCat(medicament.nom_medicament.valueOf(result.getString("nom_medicament")));
            
