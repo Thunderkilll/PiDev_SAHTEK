@@ -79,10 +79,10 @@ public class Users {
                 }
 
     //Login  du users :
-//    public Users(String password, String username) {
-//        this.password = password;
-//        this.username = username;
-//    }
+    public Users(String password, String username) {
+        this.password = password;
+        this.username = username;
+   }
 
     //getters et setters
     public int getCin() {

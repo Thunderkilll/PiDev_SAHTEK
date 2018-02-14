@@ -49,11 +49,16 @@ public class TestUserCrudes {
            Rendez_vous r2 = new Rendez_vous(588, sqlDate2, "nom1", "prenom1", 50405012, "hgfhf", sqlDate1);
            Rendez_vous r3 = new Rendez_vous(6666, sql3, "nom1", "prenom1", 50405012, "hgfhf", sql4);
            Rendez_vous r4 = new Rendez_vous(8888, sql4, "nom1", "prenom1", 50405012, "hgfhf", sql3);
-         rdv.AjouterRDV(p3,8, r1);
-           rdv.AjouterRDV(p3, 8, r4);
-           rdv.AjouterRDV(p3, 8, r2);
-           rdv.AjouterRDV(p3, 8, r3);
+//         rdv.AjouterRDV(p3,8, r1);
+//           rdv.AjouterRDV(p3, 8, r4);
+//           rdv.AjouterRDV(p3, 8, r2);
+//           rdv.AjouterRDV(p3, 8, r3);
           
+           
+           ServicesArticle sa = new ServicesArticle();
+           //sa.ajouterArticle(p3, "fuck you", "education", "i wannt to kill all of you but i love you", "image of me killing");
+          // sa.deleteArticle(p3);
+          sa.updateArticle(p3, "hsfh", "jdaj", "Tigana bamba madafaka");
         
     }
     
