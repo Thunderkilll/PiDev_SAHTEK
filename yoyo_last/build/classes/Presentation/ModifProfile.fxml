@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="894.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ModifProfileController">
+   <children>
+      <ImageView fitHeight="905.0" fitWidth="825.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medBackGround.png" />
+         </image>
+         <viewport>
+            <Rectangle2D height="767.0" width="665.0" />
+         </viewport>
+      </ImageView>
+      <Label layoutX="151.0" layoutY="17.0" prefHeight="74.0" prefWidth="373.0" text="Modifier Compte" textFill="#a80c43">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="154.0" prefHeight="30.0" prefWidth="174.0" text="Nom :" textFill="WHITE" AnchorPane.leftAnchor="64.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="217.0" prefHeight="30.0" prefWidth="164.0" text="Prenom :" textFill="WHITE" AnchorPane.leftAnchor="66.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label graphicTextGap="100.0" layoutX="71.0" layoutY="453.0" lineSpacing="100.0" prefHeight="30.0" prefWidth="164.0" text="CIN   :" textFill="WHITE" AnchorPane.leftAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="517.0" prefHeight="30.0" prefWidth="154.0" text="Adresse :" textFill="WHITE" AnchorPane.leftAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="276.0" prefHeight="30.0" prefWidth="174.0" text="User_name :" textFill="WHITE" AnchorPane.leftAnchor="61.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date" layoutX="309.0" layoutY="343.0" prefHeight="38.0" prefWidth="354.0" promptText="date" />
+      <Label layoutX="7.0" layoutY="338.0" prefHeight="43.0" prefWidth="292.0" text="Date de naissance :" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="397.0" text="Telephone   :" textFill="WHITE" AnchorPane.leftAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="309.0" layoutY="153.0" prefHeight="38.0" prefWidth="354.0" promptText="votre nom" />
+      <TextField fx:id="prenom" layoutX="309.0" layoutY="219.0" prefHeight="38.0" prefWidth="354.0" promptText="votre prenom" />
+      <TextField fx:id="tel" layoutX="308.0" layoutY="399.0" prefHeight="38.0" prefWidth="354.0" promptText="votre numero" />
+      <TextField fx:id="username" layoutX="309.0" layoutY="278.0" prefHeight="38.0" prefWidth="354.0" promptText="votre username" />
+      <TextField fx:id="cin" layoutX="309.0" layoutY="456.0" prefHeight="38.0" prefWidth="354.0" promptText="votre CIN" />
+      <TextField fx:id="adress" layoutX="309.0" layoutY="516.0" prefHeight="38.0" prefWidth="354.0" promptText="votre adresse" />
+      <Button fx:id="valider" layoutX="103.0" layoutY="853.0" mnemonicParsing="false" onAction="#ModifierAction" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #f57c00;" text="valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="return4" layoutX="611.0" layoutY="853.0" mnemonicParsing="false" onAction="#ReturnAction" prefHeight="38.0" prefWidth="138.0" style="-fx-background-color: #f57c00;" text="retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="71.0" layoutY="636.0" prefHeight="34.0" prefWidth="154.0" text="Password  :" textFill="WHITE" AnchorPane.leftAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="573.0" prefHeight="30.0" prefWidth="120.0" text="Email :" textFill="WHITE" AnchorPane.leftAnchor="71.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="309.0" layoutY="575.0" prefHeight="38.0" prefWidth="354.0" promptText="email" />
+      <Separator layoutX="294.0" layoutY="105.0" orientation="VERTICAL" prefHeight="626.0" prefWidth="2.0" />
+      <PasswordField fx:id="pwd" layoutX="309.0" layoutY="628.0" prefHeight="38.0" prefWidth="354.0" promptText="Inserer votre mt de passe" />
+      <PasswordField fx:id="pwd2" layoutX="309.0" layoutY="685.0" prefHeight="38.0" prefWidth="354.0" promptText="retape Votre Mot de passe" />
+   </children>
+</AnchorPane>

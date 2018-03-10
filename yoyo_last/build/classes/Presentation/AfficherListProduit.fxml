@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.AfficherListProduitController" >
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="88.0" prefWidth="919.0" style="-fx-background-color: #3fb8a4;">
+         <children>
+            <Text layoutX="126.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                       Afficher La Liste Des Produits" wrappingWidth="569.53515625">
+               <font>
+                  <Font name="Bell MT" size="24.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.38095238095238093" startY="0.3952380952380952">
+                     <stops>
+                        <Stop color="#891e1e" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableView" layoutX="39.0" layoutY="121.0" prefHeight="254.0" prefWidth="855.0">
+         <columns>
+            <TableColumn fx:id="nomProd" prefWidth="106.0" text="Nom" />
+            <TableColumn fx:id="id_prod" prefWidth="111.0" text="Id_Produit" />
+            <TableColumn fx:id="ref" prefWidth="132.0" text="Reference " />
+            <TableColumn fx:id="prix" prefWidth="141.0" text="Prix" />
+            <TableColumn fx:id="descr" prefWidth="364.0" text="Description" />
+         </columns>
+      </TableView>
+      <Button fx:id="modif_btn2" layoutX="123.0" layoutY="492.0" mnemonicParsing="false" onAction="#Modifier" onKeyReleased="#OnKeyReleased" onMouseClicked="#mouseClicked" text="Modifier" />
+      <Button fx:id="delete" layoutX="317.0" layoutY="492.0" mnemonicParsing="false" onAction="#delete_btn2" onKeyReleased="#OnKeyReleased" onMouseClicked="#mouseClicked" text="Supprimer" />
+      <Button fx:id="quitterb" layoutX="548.0" layoutY="486.0" mnemonicParsing="false" onAction="#NavigateToPage4" text="Quitter" />
+      <TextField fx:id="texttt" layoutX="231.0" layoutY="386.0" onKeyReleased="#OnKeyReleased" onMouseClicked="#mouseClicked" prefHeight="31.0" prefWidth="434.0" promptText="recherche produit par Produits" />
+      <Button fx:id="retour" layoutX="675.0" layoutY="486.0" mnemonicParsing="false" onAction="#NavigateToAcceuil" text="Retour" />
+   </children>
+</AnchorPane>

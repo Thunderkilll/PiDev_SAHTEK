@@ -1,0 +1,9 @@
+ 
+Pdf 
+FichierPatient{identifiant de la fiche =2
+ nom patient =person1
+prenom patient=fam1
+maldaie = person1
+traitement= traitement2
+ Diagnostique=hello from the other side of the story
+date=2018-02-08}

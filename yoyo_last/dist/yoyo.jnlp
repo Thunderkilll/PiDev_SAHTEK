@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="yoyo.jnlp">
+  <information>
+    <title>yoyo</title>
+    <vendor>music</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\dsn.jar" size="18478" download="eager" />
+    <jar href="lib\imap.jar" size="178013" download="eager" />
+    <jar href="lib\javacsv.jar" size="13582" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2445468" download="eager" />
+    <jar href="lib\mail.jar" size="507849" download="eager" />
+    <jar href="lib\mailapi.jar" size="270835" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\pop3.jar" size="43991" download="eager" />
+    <jar href="lib\smtp.jar" size="52787" download="eager" />
+    <jar href="yoyo.jar" size="46896968" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="yoyo" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="sahtek.Sahtek"  name="yoyo" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="1376.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ListeQuestionsController">
+   <children>
+      <TableView fx:id="tableb" layoutX="79.0" layoutY="259.0" prefHeight="346.0" prefWidth="1205.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="122.0" text="Id Article" />
+            <TableColumn fx:id="titre" prefWidth="168.0" text="Titre Question" />
+            <TableColumn fx:id="Sub_t" prefWidth="166.0" text="Sous Titre Questions" />
+            <TableColumn fx:id="descr" prefWidth="591.0" text="Description" />
+            <TableColumn fx:id="image" prefWidth="157.0" text="Url Images" />
+         </columns>
+      </TableView>
+      <TextField fx:id="id_article" layoutX="295.0" layoutY="189.0" onKeyReleased="#ChercherBlyet" prefHeight="46.0" prefWidth="791.0" promptText="Taper le titre la question poser/subtitre" />
+      <Button fx:id="bt7" layoutX="268.0" layoutY="633.0" mnemonicParsing="false" onAction="#AjoutArticleRedirection" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #c0ccc8;" text="Ajouter " textFill="#786161" />
+      <Button fx:id="bt9" layoutX="896.0" layoutY="633.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #c0ccc8;" text="Return" textFill="WHITE" />
+      <Button fx:id="afficher" layoutX="593.0" layoutY="633.0" mnemonicParsing="false" onAction="#AfficherAction" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #c0ccc8;" text="Afficher" textFill="#786161">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-3.0" layoutY="-4.0" prefHeight="152.0" prefWidth="1386.0" style="-fx-background-color: #3fb8a4;">
+         <children>
+            <Label alignment="CENTER" layoutX="-45.0" layoutY="16.0" prefHeight="121.0" prefWidth="1334.0" text="Liste Questions Generale" textFill="#a16262">
+               <font>
+                  <Font name="Engravers MT" size="46.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="65.0" layoutY="189.0" prefHeight="46.0" prefWidth="212.0" style="-fx-background-color: #f50202b6;" text="Search :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

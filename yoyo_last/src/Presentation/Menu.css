@@ -1,0 +1,13 @@
+.menuBTN:hover{
+    -fx-background-color: #fbc2c2 ;
+    -fx-text-alignment: center ;
+    -fx-text-fill : #ffe5e5  ;
+    
+}
+.ajoutbu:hover{
+    
+    -fx-background-color: #f70835 ;
+    -fx-text-alignment: center ;
+    -fx-text-fill : #ffe5e5  ;
+    
+}

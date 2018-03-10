@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="767.0" prefWidth="1444.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ArticlesController">
+   <children>
+      <TableView fx:id="tableb" layoutX="77.0" layoutY="158.0" prefHeight="402.0" prefWidth="970.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="116.0" text="Id Article" />
+            <TableColumn fx:id="titre" prefWidth="123.0" text="Titre Article" />
+            <TableColumn fx:id="Sub_t" prefWidth="196.0" text="Sous Titre Questions" />
+            <TableColumn fx:id="descr" minWidth="0.0" prefWidth="308.0" text="Description" />
+            <TableColumn fx:id="image" prefWidth="226.0" text="Url Images" />
+         </columns>
+      </TableView>
+      <TextField fx:id="id_article" layoutX="157.0" layoutY="590.0" onKeyReleased="#OnKeyReleased" onMouseClicked="#mouseClickedss" prefHeight="47.0" prefWidth="728.0" promptText="Taper le titre la question poser/subtitre" />
+      <Button fx:id="bt8" layoutX="1123.0" layoutY="230.0" mnemonicParsing="false" onAction="#ModifierArticleRedirection" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #c0ccc8;" text="Modifier" textFill="#786161" />
+      <Button fx:id="bt7" layoutX="1123.0" layoutY="359.0" mnemonicParsing="false" onAction="#AjoutArticleRedirection" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #c0ccc8;" text="Ajouter " textFill="#786161" />
+      <Button fx:id="bt9" layoutX="1324.0" layoutY="704.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #c0ccc8;" text="Return" textFill="#786161" />
+      <Button fx:id="afficher" layoutX="1123.0" layoutY="296.0" mnemonicParsing="false" onAction="#AfficherAction" prefHeight="30.0" prefWidth="143.0" style="-fx-background-color: #c0ccc8;" text="Afficher" textFill="#786161">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-12.0" layoutY="-29.0" prefHeight="169.0" prefWidth="1505.0" style="-fx-background-color: #3fb8a4;">
+         <children>
+            <Label alignment="CENTER" layoutX="212.0" layoutY="69.0" prefHeight="77.0" prefWidth="1042.0" text="Mes Questions" textFill="#a16262">
+               <font>
+                  <javafx.scene.text.Font name="Engravers MT" size="53.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="116.0" fitWidth="173.0" layoutX="96.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/profile_png_b.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="181.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question-sign.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="65.0" layoutX="71.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question-sign.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="bt8" layoutX="1123.0" layoutY="173.0" mnemonicParsing="false" onAction="#excel" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #c0ccc8;" text="excel" textFill="#786161" />
+      <Button fx:id="bt1" layoutX="1133.0" layoutY="614.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #c0ccc8;" text="Retour " textFill="#786161" />
+   </children>
+</AnchorPane>
