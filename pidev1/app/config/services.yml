@@ -1,0 +1,11 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    fos_user.doctrine_registry:
+            alias: doctrine
+    redirect.after.login:
+            class: UserBundle\Redirection\AfterLoginRedirection
+            arguments:    ["@router"]
