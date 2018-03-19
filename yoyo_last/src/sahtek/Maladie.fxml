@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahtek.FXMLDocumentController">
+   <children>
+      <Pane fx:id="rightContainer" layoutX="486.0" onDragDetected="#z" opacity="0.68" prefHeight="512.0" prefWidth="486.0" style="-fx-background-color: #008b8b;" styleClass="ab-b-l">
+         <children>
+            <TabPane prefHeight="512.0" prefWidth="486.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Users" />
+              </tabs>
+            </TabPane>
+            <Pane layoutX="43.0" layoutY="45.0" prefHeight="396.0" prefWidth="400.0" style="-fx-background-color: #008b8b;" />
+            <Label fx:id="status" layoutX="404.0" layoutY="481.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="rightContainer1" layoutX="-7.0" onDragDetected="#z" opacity="0.68" prefHeight="512.0" prefWidth="486.0" style="-fx-background-color: #008b8b;" styleClass="ab-b-l">
+         <children>
+            <TabPane layoutY="8.0" prefHeight="502.0" prefWidth="486.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Maladies">
+                  <content>
+                    <AnchorPane fx:id="show_malad" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="bouttonMaladie" layoutX="166.0" layoutY="413.0" mnemonicParsing="false"  text="Afficher les maladies" />
+                              <TableView fx:id="TableMaladie" layoutX="11.0" layoutY="11.0" prefHeight="385.0" prefWidth="464.0">
+                                <columns>
+                                  <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                                  <TableColumn fx:id="symptomes" prefWidth="241.0" text="Symptomes" />
+                                    <TableColumn fx:id="description" prefWidth="146.0" text="Description" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

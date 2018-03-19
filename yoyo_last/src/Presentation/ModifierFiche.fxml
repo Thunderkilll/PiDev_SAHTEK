@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ModifierFicheController">
+   <children>
+      <ImageView fitHeight="673.0" fitWidth="1393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medBackGround.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="101.0" prefWidth="1061.0" text="Modifier Fiche Patient" textFill="WHITE">
+         <font>
+            <Font name="Engravers MT" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt2" layoutX="234.0" layoutY="617.0" mnemonicParsing="false" onAction="#ModifierFiche" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: #f57c00;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="bt1" layoutX="1035.0" layoutY="603.0" mnemonicParsing="false" onAction="#ReturnToList" prefHeight="42.0" prefWidth="84.0" style="-fx-background-color: #f57c00;" text="Return" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="id_fiche" layoutX="744.0" layoutY="562.0" opacity="0.0" prefHeight="17.0" prefWidth="34.0" style="-fx-background-color: black;" />
+      <Separator layoutX="385.0" layoutY="108.0" orientation="VERTICAL" prefHeight="466.0" prefWidth="1.0" />
+      <Label layoutX="68.0" layoutY="106.0" prefHeight="27.0" prefWidth="188.0" text="Nom Patient :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="166.0" prefHeight="26.0" prefWidth="202.0" text="Prenom Patient :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="218.0" prefHeight="49.0" prefWidth="307.0" text="Nom maladie :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="68.0" layoutY="293.0" text="Medicament/traitement :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="65.0" layoutY="428.0" prefHeight="40.0" prefWidth="291.0" text="Diagnostique du Patient :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="94.0" layoutY="523.0" prefHeight="42.0" prefWidth="264.0" text="Prochain Rendez_vous :" textAlignment="CENTER" textFill="#f80707">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateRDV" layoutX="566.0" layoutY="523.0" prefHeight="42.0" prefWidth="356.0" promptText="Next appointment" />
+      <TextArea fx:id="diagnostique" layoutX="436.0" layoutY="352.0" prefHeight="152.0" prefWidth="577.0" promptText="text of the diagnostique" />
+      <TextField fx:id="med" layoutX="461.0" layoutY="284.0" prefHeight="42.0" prefWidth="503.0" promptText="Medicament a utiliser/Traitement" />
+      <TextField fx:id="nom_m" layoutX="459.0" layoutY="215.0" prefHeight="40.0" prefWidth="503.0" promptText="Type Maladie/Nom" />
+      <TextField fx:id="prenom_p" layoutX="458.0" layoutY="161.0" prefHeight="31.0" prefWidth="503.0" promptText="Prenom du patient" />
+      <TextField fx:id="nom_p" layoutX="458.0" layoutY="108.0" prefHeight="31.0" prefWidth="503.0" promptText="nom patient" />
+   </children>
+</AnchorPane>

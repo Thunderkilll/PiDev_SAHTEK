@@ -1,0 +1,44 @@
+
+/**
+ * Example written for JavaOne 2016.
+ * Differences between iText 5 and iText 7 are discussed in the JavaOne talk
+ * "Oops, I broke my API" by Raf Hens and Bruno Lowagie.
+ * This is the iText 5 version of one of the examples.
+ */
+package test;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.Writer;
+import javax.print.Doc;
+import javax.print.DocFlavor;
+import javax.print.DocPrintJob;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
+import javax.print.SimpleDoc;
+
+public class Text2Pdf {
+    public static void main(String[] args) throws Exception {
+       DocFlavor flavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
+        Writer output = null;
+        String text = "printing in pdfPrinting in Java ";
+//badil el chemain
+
+        File file = new File("C:\\Users\\khaled22\\Desktop\\3A7_Sem2\\pi dev\\Test\\src\\CMPSup_AL_.PDF");
+        output = new BufferedWriter(new FileWriter(file));
+        output.write(text);
+        output.close();
+        InputStream is = new BufferedInputStream(new FileInputStream(file));
+        PrintService service = PrintServiceLookup.lookupDefaultPrintService();
+        //DocPrintJob job = service.createPrintJob();
+        Doc doc = new SimpleDoc(is, flavor, null);
+       // PrintJobWatcher pjDone = new PrintJobWatcher(job);
+       // job.print(doc, null);
+       // pjDone.waitForDone();
+        is.close();
+    }
+}

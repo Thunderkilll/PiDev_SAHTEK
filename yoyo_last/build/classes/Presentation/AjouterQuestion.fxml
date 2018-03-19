@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.AjouterQuestionController">
+   <children>
+      <ImageView fitHeight="814.0" fitWidth="1310.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medBackGround.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="24.0" prefHeight="72.0" prefWidth="1171.0" text="Ajouter Question" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <javafx.scene.text.Font name="Engravers MT" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt7" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="612.0" mnemonicParsing="false" onAction="#Avance1" prefHeight="55.0" prefWidth="143.0" style="-fx-background-color: #f57c00;" text="Confirmer" textFill="WHITE" />
+      <Separator layoutX="430.0" layoutY="128.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="4.0" />
+      <Separator layoutX="245.0" layoutY="100.0" prefHeight="2.0" prefWidth="699.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="145.0" prefHeight="42.0" prefWidth="235.0" text="Title" textFill="#fc0000">
+         <font>
+            <javafx.scene.text.Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="213.0" prefHeight="48.0" prefWidth="235.0" text="Sous Titre" textFill="#fc0000">
+         <font>
+            <javafx.scene.text.Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="96.0" layoutY="312.0" prefHeight="72.0" prefWidth="188.0" text="Description" textFill="#fc0000">
+         <font>
+            <javafx.scene.text.Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="96.0" layoutY="431.0" prefHeight="55.0" prefWidth="223.0" text="Image" textFill="#fc0000">
+         <font>
+            <javafx.scene.text.Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="image" layoutX="468.0" layoutY="449.0" prefHeight="25.0" prefWidth="359.0" promptText="Insert URL from here" />
+      <TextArea fx:id="descript" layoutX="468.0" layoutY="279.0" prefHeight="146.0" prefWidth="570.0" promptText="Descrioption of the article" />
+      <TextField fx:id="titre" layoutX="468.0" layoutY="150.0" prefHeight="31.0" prefWidth="447.0" promptText="Title" />
+      <TextField fx:id="sub_t" layoutX="468.0" layoutY="221.0" prefHeight="31.0" prefWidth="447.0" promptText="Sub_t" />
+      <Button fx:id="bt9" layoutX="1048.0" layoutY="640.0" mnemonicParsing="false" onAction="#annnule1" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: #f57c00;" text="Annuler" textFill="WHITE">
+         <font>
+            <javafx.scene.text.Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="ImageUpload" layoutX="915.0" layoutY="449.0" mnemonicParsing="false" onAction="#ImageUpload" prefHeight="31.0" prefWidth="115.0" text="Upload Image" />
+   </children>
+</AnchorPane>

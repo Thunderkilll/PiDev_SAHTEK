@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ListeFichesConsultationController">
+   <children>
+      <Button fx:id="bt14" layoutX="747.0" layoutY="554.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #c0ccc8;" text="Return" textFill="#786161">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="bt16" layoutX="539.0" layoutY="624.0" mnemonicParsing="false" onAction="#AjouterAction2" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: 7;" text="Ajouter Fiche" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="tf1" layoutX="306.0" layoutY="558.0" prefHeight="24.0" prefWidth="394.0" promptText="recherche  nom/Type Maladie" />
+      <Button fx:id="bt24" layoutX="114.0" layoutY="536.0" mnemonicParsing="false" onAction="#modifierAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #c0ccc8;" text="Modifier Fiche" textFill="#786161">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Separator layoutX="-2.0" layoutY="658.0" prefHeight="13.0" prefWidth="1118.0" />
+      <TableView fx:id="tableView" layoutX="79.0" layoutY="172.0" prefHeight="332.0" prefWidth="878.0">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="97.99996948242188" text="Nom " />
+          <TableColumn fx:id="prenom" prefWidth="85.0" text="Prenom " />
+            <TableColumn fx:id="Nom_Maladie" prefWidth="78.0" text="Maladie" />
+            <TableColumn fx:id="medicaments" prefWidth="161.0" text="Traitements/Medicaments" />
+            <TableColumn fx:id="descr" prefWidth="111.0" text="Diagnostique" />
+            <TableColumn fx:id="date" prefWidth="85.0" text="Date Retour" />
+            <TableColumn fx:id="id_fiche" prefWidth="117.0" text="N° Dossier" />
+            <TableColumn prefWidth="155.0" text="Nom_Medecin" />
+        </columns>
+      </TableView>
+      <Button fx:id="pdf" layoutX="762.0" layoutY="629.0" mnemonicParsing="false" onAction="#GeneratePDF" text="Get PDF" textFill="#ff0303">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="bt30" layoutX="114.0" layoutY="590.0" mnemonicParsing="false" onAction="#AfficherFicheAction" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #c0ccc8;" text="Afficher Fiche" textFill="#786161">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-4.0" layoutY="-7.0" prefHeight="117.0" prefWidth="1138.0" style="-fx-background-color: #3fb8a4;">
+         <children>
+            <Label alignment="CENTER" layoutX="-13.0" layoutY="14.0" prefHeight="119.0" prefWidth="891.0" text="Fiches Consultations" textFill="#a16262">
+               <font>
+                  <Font name="Engravers MT" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

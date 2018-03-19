@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1298.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.AffichageFicheController">
+   <children>
+      <ImageView fitHeight="747.0" fitWidth="1334.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medical-background-with-loop_4p1uvboye__F0008.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="20.0" prefHeight="95.0" prefWidth="561.0" text="Fiche Consultation N° : ">
+         <font>
+            <Font name="Engravers MT" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="id_fiche" layoutX="715.0" layoutY="27.0" prefHeight="77.0" prefWidth="173.0" text="nb_fiche" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="145.0" prefHeight="45.0" prefWidth="236.0" text="Nom Patient : " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="228.0" text="Prenom Patient :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="306.0" prefHeight="45.0" prefWidth="236.0" text="Maladie :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="390.0" prefHeight="45.0" prefWidth="236.0" text="Traitement  :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="454.0" text="Diagnostique du cas :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="578.0" text="Date du prochain rendez-vous :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbnom" layoutX="605.0" layoutY="145.0" prefHeight="45.0" prefWidth="467.0" text="lbnom" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbprenom" layoutX="605.0" layoutY="228.0" prefHeight="45.0" prefWidth="492.0" text="lbprenom" textFill="#fc0000">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbmaladie" layoutX="611.0" layoutY="308.0" prefHeight="45.0" prefWidth="481.0" text="lbmaladied" textFill="#fc0000">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbtraitement" layoutX="616.0" layoutY="382.0" prefHeight="45.0" prefWidth="492.0" text="lbtraitement" textFill="#fc0000">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbdesc" layoutX="616.0" layoutY="427.0" prefHeight="144.0" prefWidth="527.0" text="lbdesc" textFill="#fc0000">
+         <font>
+            <Font name="Arial Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="pdf" layoutX="1189.0" layoutY="648.0" mnemonicParsing="false" onAction="#GeneratePDF" style="-fx-background-color: #f57c00;" text="Extraire PDF" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbdate" layoutX="605.0" layoutY="586.0" prefHeight="17.0" prefWidth="274.0" text="lbdate" textFill="#fc0000">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="59.0" fitWidth="78.0" layoutX="508.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/date.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="389.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profile_png_b.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="389.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profile_png_b.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="95.0" fitWidth="83.0" layoutX="418.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="retour" fitHeight="77.0" fitWidth="95.0" layoutX="986.0" layoutY="625.0" onMouseClicked="#ReturnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btSupp" layoutX="1097.0" layoutY="649.0" mnemonicParsing="false" onAction="#DeleteAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #f57c00;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>

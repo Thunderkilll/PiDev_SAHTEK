@@ -1,0 +1,9 @@
+ 
+Pdf 
+FichierPatient{identifiant de la fiche =0
+ nom patient =null
+prenom patient=null
+maldaie = null
+traitement= null
+ Diagnostique=null
+date=null}
