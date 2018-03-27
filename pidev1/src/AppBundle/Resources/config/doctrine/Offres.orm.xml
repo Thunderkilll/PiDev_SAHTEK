@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Offres" table="offres">
+    <id name="nom" type="string" column="nom" length="50">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateDebut" type="date" column="date_debut" nullable="false"/>
+    <field name="dateFin" type="date" column="date_fin" nullable="false"/>
+    <field name="descrOffre" type="text" column="descr_offre" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="prix" type="float" column="prix" precision="10" scale="0" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Pharmacie" table="pharmacie">
+    <id name="idPharmacie" type="integer" column="id_pharmacie">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nomPharmacie" type="string" column="nom_pharmacie" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="adresse" type="string" column="adresse" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="telephone" type="integer" column="telephone" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="codePostal" type="integer" column="code_postal" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="horaireTravail" type="date" column="horaire_travail" nullable="false"/>
+  </entity>
+</doctrine-mapping>

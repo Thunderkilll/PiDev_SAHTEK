@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+{% extends ":default:PageAdmin.html.twig" %}
+{% block adminName %}
+    <ul>
+        <li>  <a href="{{ path('fos_user_security_logout') }}">deconnecter </a></li>
+    </ul>
+    <
+
+{% endblock %}
+{% block content %}
+
+
+
+
+    <!-- table end-->
+
+
+
+    <!--<script type="text/javascript">
+
+    $("button#bt").click(
+        function () {
+
+            alert($(this).data("id"));
+
+        }
+    );
+
+    function validation(e){
+        var id = $(e).data("id");
+
+        swal({
+                title: "Etes vous sur?",
+                text: "Il  ne sera pas possible de revenir en arriére!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Oui,supprimer!",
+                closeOnConfirm: false
+            },
+            function(e){
+
+                var id = $(e).data("id")
+
+                var path = "{{ path('reclamation_delete',{idreclamation:14}) }}";
+                $.ajax({
+                    type: 'POST',
+                    url: path,
+                    success: swal("Supprimé!", "La reclamation a été supprimé avec succes.", "success")
+                });
+
+            });
+    }
+
+</script>
+-->
+
+
+
+
+{% endblock %}

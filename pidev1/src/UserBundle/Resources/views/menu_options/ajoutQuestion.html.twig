@@ -1,0 +1,289 @@
+
+{% extends  "::layout.html.twig" %}
+
+{% block content %}
+    <style type="text/css">
+#userbundle_articles_poster{
+
+    display: block;
+    text-decoration: none;
+    height: 73px;
+    line-height: 73px;
+    text-align: center;
+    padding: 0 0 ;
+    background: url("{{ asset('bundles/user/images/button1.png') }}") left top repeat-x;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #eeeeee;
+    text-transform: uppercase;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 350px;
+}
+        .formulaire{
+
+            background: url("{{ asset('bundles/user/images/513904.jpg') }}");
+        }
+        #img{ text-align: center;
+            color: #eeeeee;
+            font-family: 'Oswald', serif;
+            font-weight: 400;
+            font-size: 50px;
+            width: 500px;
+            border: 12px;
+            text-shadow:2px 2px #ff0000;
+        }
+#titre{
+    text-align: center;
+    color: #eeeeee;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 50px;
+    width: 500px;
+    border: 12px;
+    text-shadow:2px 2px #ff0000;
+}
+#sub{
+    text-align: center;
+    color: #eeeeee;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 50px;
+    width: 500px;
+    border: 12px;
+    text-shadow:2px 2px #ff0000;
+}
+#desc{
+    text-align: center;
+    color: #eeeeee;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 50px;
+    width: 500px;
+    border: 12px;
+    text-shadow:2px 2px #ff0000;
+}
+
+.desc {
+
+    text-align: center;
+    width: 500px;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 25px;
+
+}
+
+        #button1{
+            text-align: center;
+            width: 500px;
+            height: 250px;
+        }
+
+
+
+        #userbundle_articles_titre{
+            width: 450px;
+            font-family: 'Oswald', serif;
+            font-weight: 400;
+            font-size: 25px;
+
+        }
+        #userbundle_articles_subT{
+            width: 450px;
+            font-family: 'Oswald', serif;
+            font-weight: 400;
+            font-size: 25px;
+        }
+#userbundle_articles_descript{
+    width: 450px;
+    height: 250px;
+
+}
+        #userbundle_articles_image {
+            width: 465px;
+
+        }
+input{
+        text-align: center;
+            color: snow;
+            width: 700px;
+            height: 300px;
+            font-family: 'Oswald', serif;
+            font-weight: 400;
+            font-size: 30px;
+        }
+    </style>
+    <div class="formulaire">
+
+        <marquee id="titre"> <h1 align="centre" style="text-shadow: 2px 2px #888">Ajouter Votre Question Ici </h1></marquee>
+{{ form_start(f) }}
+
+    <div style="text-align: center; ">
+<table style="alignment:center " border="0">
+    <tr >
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="titre">TITRE</td>
+        <td></td>
+
+        <td></td>
+        <td aria-required="true" style="text-align: center;color: #a70000; font-size: 24px">
+            <br>
+            <br>
+            {{ form_widget(f.titre) }}
+            <br>
+            <br>
+                    </td>
+                         </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="sub">SUJET</td>
+        <td></td>
+        <td></td>
+
+        <td aria-required="true" style="text-align: center; color: #a70000; font-size: 24px">
+            <br>
+            <br>
+
+            {{ form_widget(f.subT) }}
+            <br>
+            <br>
+                </td>
+                        </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="desc">DESCRIPTION DE <br /><br /><br /> VOTRE PROBLÈME</td>
+        <td></td>
+        <td></td>
+        <td class="desc">
+            <br>
+            <br>
+            {{ form_widget(f.descript) }}
+            <br>
+            <br>
+
+                </td>
+
+
+                    </tr>
+
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="img">Image</td>
+        <td></td>
+        <td></td>
+        <td style="text-align: center; color: #131313; font-size: 24px">
+            <br>
+            <br>
+            <input type="file"  value=" {{ form_widget(f.image) }} ">
+
+
+
+            <br>
+            <br>
+                </td>
+        <td>
+
+
+
+                          </tr>
+    <tr>
+
+        <td >
+
+
+        </td>
+    </tr>
+    <tr>
+<td>                    </td>
+
+
+    </tr>
+
+
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td><td></td>
+        <
+        <td  class="block2">
+            <br>
+            {{ form_widget(f.poster) }}
+            <br>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+</table>
+    </div>
+        {{ form_end(f) }}
+
+    </div>
+{% endblock %}
+{#<form method= action=>#}
+

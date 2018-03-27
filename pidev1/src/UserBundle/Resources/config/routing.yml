@@ -10,3 +10,24 @@ Page_Admin:
 Page_Client:
     path:     /Page_Client
     defaults: { _controller: UserBundle:Default:Client }
+
+Page_services:
+    path:     /menu_option/services
+    defaults: { _controller: UserBundle:Default:Services }
+
+Page_produits:
+    path:     /menu_option/produits
+    defaults: { _controller: UserBundle:Default:Produits }
+
+Page_questions:
+    path:     /menu_option/Q&A
+    defaults: { _controller: UserBundle:articles:list }
+
+ajout_question:
+    path:     /ajoutQuestion
+    defaults: { _controller: UserBundle:articles:ajoutQuestion }
+
+ajouter_image:
+  path: /test
+  defaults: { _controller: UserBundle:Default:images }
+

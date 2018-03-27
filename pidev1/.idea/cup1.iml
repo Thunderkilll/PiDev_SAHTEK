@@ -43,8 +43,27 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/symfony" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/fig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/friendsofsymfony" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/incenteev" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/jdorn" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/paragonie" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/psr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/sensio" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/sensiolabs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/twig" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="prefixfree" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="prefixfree" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

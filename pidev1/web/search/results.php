@@ -57,21 +57,21 @@ foreach($files as $file){
 <head>
 	<title>Search results</title>	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-	<link rel="stylesheet" href="../css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{ asset('../css/bootstrap.css'}}" type="text/css" media="screen">
 	<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="search.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{asset('bundles/user/search/search.css') }}" type="text/css" media="screen">
 
 </head>
 <body>
 <script type="text/javascript">
-;(function(){	
-	document.body.onload=resize
-	window.onresize=resize
+(function(){
+	document.body.onload=resize ;
+	window.onresize=resize ;
 	
 	function resize(){
-		parent._resize(document.getElementById('search-results').offsetHeight)
+		parent._resize(document.getElementById('search-results').offsetHeight);
 	}
-})()
+})();
 </script>
 
 	<div id="search-results">

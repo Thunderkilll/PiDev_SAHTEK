@@ -5,7 +5,7 @@
 
 
 
-{% extends ":default:PageAdmin.html.twig" %}
+{% extends ":default:admin.html.twig" %}
 {% block adminName %}
     <ul>
         <li>  <a href="{{ path('fos_user_security_logout') }}">deconnecter </a></li>
@@ -14,54 +14,43 @@
 
 {% endblock %}
 {% block content %}
+    <table border="1" align="centre">
+        <tr><td>Identifiant</td>
+            <td>Nom d'Utilisateur</td>
+            <td>Email</td>
+            <td>Dernier Login</td>
+            <td>Requéte de mots de passe </td>
+            <td>Role</td>
+            <td>Nom</td>
+            <td>Nom de Famille</td>
+            <td>Numéro de CIN</td>
+            <td>Adresse</td>
+
+        </tr>
+        {% for m in users %}
+            <tr>
+                <td>{{ m.id}}</td>
+                <td>{{ m.username }}</td>
+                <td>{{ m.email }}</td>
+                <td>{{ m.lastLogin|date}}</td>
+                <td>{{ m.passwordRequestedAt|date }}</td>
+                <td> {% for i in m.getRoles() %}
+                    <li> {{ i }}</li>
+                    {% endfor %}
+
+                </td>
+                <td>{{ m.name}}</td>
+                <td>{{ m.getFamilyName()}}</td>
+                <td>{{ m.cin}}</td>
+                <td>{{ m.address}}</td>
 
 
+            </tr>
 
-
-    <!-- table end-->
-
-
-
-    <!--<script type="text/javascript">
-
-    $("button#bt").click(
-        function () {
-
-            alert($(this).data("id"));
-
-        }
-    );
-
-    function validation(e){
-        var id = $(e).data("id");
-
-        swal({
-                title: "Etes vous sur?",
-                text: "Il  ne sera pas possible de revenir en arriére!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Oui,supprimer!",
-                closeOnConfirm: false
-            },
-            function(e){
-
-                var id = $(e).data("id")
-
-                var path = "{{ path('reclamation_delete',{idreclamation:14}) }}";
-                $.ajax({
-                    type: 'POST',
-                    url: path,
-                    success: swal("Supprimé!", "La reclamation a été supprimé avec succes.", "success")
-                });
-
-            });
-    }
-
-</script>
--->
-
-
+        {% endfor %}
+    </table>
+    <br>
+    <br>
 
 
 {% endblock %}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\CarteService" table="carte_service">
+    <unique-constraints>
+      <unique-constraint name="id_carte_service" columns="id_carte_service"/>
+    </unique-constraints>
+    <id name="numCarteService" type="integer" column="num_carte_service">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idCarteService" type="integer" column="id_carte_service" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="specialite" type="string" column="specialite" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

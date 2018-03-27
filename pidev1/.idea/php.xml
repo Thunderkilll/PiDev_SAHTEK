@@ -24,7 +24,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
@@ -41,6 +40,22 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/vendor/doctrine" />
+      <path value="$PROJECT_DIR$/vendor/vendor/bin" />
+      <path value="$PROJECT_DIR$/vendor/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/vendor/psr" />
+      <path value="$PROJECT_DIR$/vendor/vendor/monolog" />
+      <path value="$PROJECT_DIR$/vendor/vendor/sensiolabs" />
+      <path value="$PROJECT_DIR$/vendor/vendor/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/vendor/twig" />
+      <path value="$PROJECT_DIR$/vendor/vendor/jdorn" />
+      <path value="$PROJECT_DIR$/vendor/vendor/sensio" />
+      <path value="$PROJECT_DIR$/vendor/vendor/paragonie" />
+      <path value="$PROJECT_DIR$/vendor/vendor/incenteev" />
+      <path value="$PROJECT_DIR$/vendor/vendor/friendsofsymfony" />
+      <path value="$PROJECT_DIR$/vendor/vendor/symfony" />
+      <path value="$PROJECT_DIR$/vendor/vendor/fig" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />

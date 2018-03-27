@@ -43,7 +43,10 @@ class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
             $redirection = new RedirectResponse($this->router->generate('Page_Agent'));
 // otherwise we redirect user to the member area
         elseif (in_array('ROLE_ADMIN', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('Page_Admin'));
+            $redirection = new RedirectResponse($this->router->generate('Page_Agent'));
+// otherwise, if is a commercial user we redirect to the crm area
+        elseif (in_array('ROLE_PATIENT', $rolesTab, true))
+            $redirection = new RedirectResponse($this->router->generate('Page_Client'));
 // otherwise we redirect user to the member area
         else
             $redirection = new RedirectResponse($this->router->generate('Page_Agent'));
@@ -51,4 +54,3 @@ class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
         return $redirection;
     }
 }
-

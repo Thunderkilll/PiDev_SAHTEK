@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Centre" table="centre">
+    <indexes>
+      <index name="nom" columns="nom"/>
+      <index name="id_produit" columns="id_produit"/>
+    </indexes>
+    <id name="idCentre" association-key="true"/>
+    <field name="nomCentre" type="string" column="nom_centre" length="11" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="adresseCentre" type="string" column="adresse_centre" length="20" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="telephone" type="integer" column="telephone" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <one-to-one field="idCentre" target-entity="Reservation" fetch="LAZY">
+      <join-columns>
+        <join-column name="id_centre" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="idProduit" target-entity="Produit" fetch="LAZY">
+      <join-columns>
+        <join-column name="id_produit" referenced-column-name="id_produit"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="nom" target-entity="Offres" fetch="LAZY">
+      <join-columns>
+        <join-column name="nom" referenced-column-name="nom"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
