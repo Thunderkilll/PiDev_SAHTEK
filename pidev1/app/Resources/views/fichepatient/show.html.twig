@@ -1,0 +1,53 @@
+{% extends ':fichepatient:med_layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Fichepatient</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id_fiche</th>
+                <td>{{ fichePatient.idfiche }}</td>
+            </tr>
+            <tr>
+                <th>Nom_p</th>
+                <td>{{ fichePatient.nomp }}</td>
+            </tr>
+            <tr>
+                <th>Prenom_p</th>
+                <td>{{ fichePatient.prenomp }}</td>
+            </tr>
+            <tr>
+                <th>Maladie</th>
+                <td>{{ fichePatient.maladie }}</td>
+            </tr>
+            <tr>
+                <th>Traitement</th>
+                <td>{{ fichePatient.traitement }}</td>
+            </tr>
+            <tr>
+                <th>Diagnostique</th>
+                <td>{{ fichePatient.diagnostique }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if fichePatient.date %}{{ fichePatient.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('fiche_edit', { 'id_fiche': fichePatient.id_fiche }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -3,15 +3,11 @@
 namespace UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use UserBundle\Entity\Articles;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
-        $m=$this->getDoctrine()->getManager();
-        $articles=$m->getRepository('UserBundle:Articles')->findAll();
-        return $this->render('UserBundle::index.html.twig',array('article'=>$articles));
-    }
+
     public function AgentAction()
     {
 
@@ -52,4 +48,9 @@ class DefaultController extends Controller
         return $this->render('UserBundle::test.html.twig');
     }
 
+    public function AfficherQuestionAction(Articles $article){
+        return $this->render('UserBundle:menu_options:questionAffiche.html.twig', array(
+            'article' => $article ));
+
+    }
 }

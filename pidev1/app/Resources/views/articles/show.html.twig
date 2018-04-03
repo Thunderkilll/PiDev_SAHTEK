@@ -1,0 +1,46 @@
+{% extends ":default:admin.html.twig" %}
+
+{% block content %}
+    {% block body %}
+    <h1>Article</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idarticle</th>
+                <td>{{ article.idArticle }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ article.titre }}</td>
+            </tr>
+            <tr>
+                <th>Subt</th>
+                <td>{{ article.subT }}</td>
+            </tr>
+            <tr>
+                <th>Descript</th>
+                <td>{{ article.descript|raw}}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td> <img src="{{ asset('upload_images/upload_img/' ~ article.image) }}"   width="100" height="100"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('manager_articles_index') }}">Retour a la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('manager_articles_edit', { 'idArticle': article.idArticle }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
+{% endblock %}

@@ -2,6 +2,7 @@
 
 namespace UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -29,12 +30,16 @@ class Articles
     private $subT;
 
     /**
+     * @var string
      * @ORM\Column (type="text" )
      */
 
     private $descript;
 
     /**
+     * @var string
+     * @Assert\NotBlank(message="please insert une image")
+     * @Assert\Image()
      * @ORM\Column (type="string" , length=255)
      */
 

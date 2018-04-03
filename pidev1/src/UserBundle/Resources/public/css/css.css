@@ -1,0 +1,229 @@
+.ui-dialog {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .2em;
+    padding-top: 0.2em;
+    padding-right: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.2em;
+    outline: 0;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+    background: #f9f9f9;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(249, 249, 249);
+    border: 1px solid #999;
+    border-top-color: rgb(153, 153, 153);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(153, 153, 153);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(153, 153, 153);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(153, 153, 153);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    color: #222;
+    text-align: center;
+    background: #F9F9F9;
+    /* font-family: Arial,Helvetica,sans-serif; */
+    font-weight: bolder;
+}
+
+
+.ui-dialog .ui-dialog-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    float: left;
+    margin: .1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+button.ui-button-icon-only {
+    width: 2.4em;
+}
+
+.ui-button-icon-only {
+    width: 2.2em;
+}
+
+.ui-button, .ui-button:link, .ui-button:visited, .ui-button:hover, .ui-button:active {
+    text-decoration: none;
+}
+
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.clearfix:before, .clearfix:after {
+    content: ' ';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+.register_box, .login { width:400px; margin-left:10px;  background:#f9f9f9; z-index: 10; }
+.register_box h2,.login h2{ position:relative; font-size:22px; font-weight:bold;  padding:0px 10px 0 35px; color:#403f3f; }
+/*.register_box h2 b, .login h2 b{ position:absolute; right:10px; top:5px; width:27px; height:27px; background:url(../../../images/official/common/sign_close.gif) 0 0 no-repeat; cursor:pointer;}
+*/
+
+/* register */
+.main{width:400px;  }
+.main fieldset{}
+.register div { position:relative;background:#f9f9f9}
+.register div input {width:249px; margin-left:30px; border:1px solid #d2d2d2; overflow:hidden; height:26px; font-size:14px; color:#747474; font-family:Verdana,Arial,Helvetica,sans-serif;  padding:3px 4px; line-height:30px\9; outline:none;}
+.register div input.focus{ border:1px solid #f80400}
+.register div.user,.register div.email,.register div.password,.register div.cpassword{ height:40px;display:inline-block; margin-top: 20px; *zoom:1;*display:inline;}
+.register div.user{margin-top: 18px;}
+.register div.cbox {height:15px; position:relative;left:30px; top:30px; width:365px;}
+.sign_dialog .check_agree{ color:#767676;}
+
+.sign_dialog .play {position:relative;top:40px;left:5px;background:#3867bf ;border:none; cursor: pointer; display: block; font-size:16px; font-weight:bolder; text-align:center; height:38px;width:142px; margin: 25px 0 25px 30px; color:#fff;}
+.register div.cbox input {  vertical-align: middle; width:13px; height:13px; margin-right:5px;  padding:0px\9; margin-top:0; float:none;}
+.register div.cbox label {  display: inline; font-size: 12px; color:#888; width:auto; line-height:15px; float:none;font-weight:normal;margin-left:20px;}
+.register div.cbox a {color:#144db4;}
+
+.sign_dialog .login_with{position:relative;top:50px;left:0px;border-top:1px dashed #ccc ; padding-top:20px; margin:0 auto;font-size:12px; }
+.sign_dialog .login_new{ color:#757575; float:left; padding-right:12px; }
+.sign_dialog .login_new span{ display:inline-block; height:23px; line-height:23px; float:left; margin-left:5px; }
+.sign_dialog .login_new a{ text-decoration:underline;  height:23px; cursor:pointer; color:#124cb0 }
+.sign_dialog .login_f { float:left}
+.sign_dialog .login_f a{ display:inline-block; width:146px; height:23px; cursor:pointer;}
+
+/****************** common css ***********/
+
+
+body{font:12px/150% corbel,Helvetica,Arial,Helvetica,sans-serif;text-align:center; background:#242424; padding:0; margin:0 auto;}
+body > div{text-align:left;margin-right:auto;margin-left:auto;}
+div,form,ol,li,span,ul,dl,dt,dd{ margin:0; padding:0; border:0; text-align:left;}
+img,a img,p{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0; font-weight:normal; font-size:12px;}
+ul,ol,li {list-style:none;text-align:left;}
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td { margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline; }
+img{vertical-align:top;}
+/* 默认链接颜色 */
+a{outline-style:none;text-decoration:none; color:#292929;}
+a:focus { outline: 0; }
+a:hover {color:#292929}
+
+/* 通用属性 */
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;font-size:1px;width:1px;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}/*ie and firefox1.5 updata */
+.clearfix:before,.clearfix:after{content:' ';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+
+
+/*中间部分*/
+#contentBox{ overflow:hidden; height:855px;}
+.centerbox{ width:100%; height:100%; position:relative;/* 整个页面背景图片拆分 background-image:url(../../../../images/official/naruto/bigbg1.jpg); background-color:#fff; background-position:center top; background-repeat:no-repeat;*/}
+.center_aninmatbg{ display:block;opacity: 0; filter:Alpha(opacity=0);z-index:-10;width:100%; height:100%; background-color:#fff; background-position:center top; background-repeat:no-repeat; position:absolute; left:0px; top:0px;  }
+
+.navbox{ width:980px; height:70px; margin:0 auto; margin-bottom:330px;}
+
+/*中间内容*/
+.content{ width:980px;margin:0 auto;}
+
+
+.title .welcome{float:left; font-family:Tahoma, Geneva, sans-serif; font-size:16px; color:#ff7800; width:260px; overflow:hidden; height:35px; line-height:35px; padding-left:10px;}
+.login_username{ width:275px; overflow:hidden; margin-bottom:5px;}
+.login_username .username{ margin-top:10px;}
+.login_username .username , .login_username .password{ border:none; width:257px; height:30px; line-height:30px; overflow:hidden; background:#fdfdfd ;color:#969595; margin-left:5px; margin-bottom:5px; padding:0 4px;}
+.col_3d{ color:#3d3d3d}
+.login_username div{ padding:3px 0 3px 5px;}
+.login_username div span{ display:inline-block; margin:6px 0px;}
+.login_username div span a{color:#dddddd; margin-right:8px; }
+.login_username div span a:hover{ text-decoration:underline; color:#fff;}
+.login_username strong a{ display:block; float:left; margin-left:5px;height:38px; line-height:38px; color:#fff; text-align:center; font-family:Tahoma, Geneva, sans-serif; font-size:14px;}
+.login_username strong a.signin{width:142px; background:#3867c0;}
+.login_username strong a.signup{ width:118px; background:#adadad;}
+
+.login_username p{}
+.login_username p strong{ font-family:Tahoma, Geneva, sans-serif; color:#ff7800; font-size:13px; font-weight:bolder; height:30px; line-height:30px; padding-left:10px;}
+.login_username p span{ display:block; width:255px; padding:0 10px; overflow:hidden; color:#fff; height:22px; line-height:22px; }
+.login_username p span.login_history{ font-size:15px; font-weight:bolder;}
+
+.login_username p span a.last_login_history{color:#ff7800; text-decoration:underline; font-size:13px; font-family:Arial, Helvetica, sans-serif;}
+.login_username p a.log_out{ display:block; width:140px; height:38px; background:#3867c0; margin-left:10px; color:#fff; text-align:center; line-height:38px; font-size:18px;}
+a.user_logout_left{ display:block; width:140px; height:38px; background:#3867c0; margin-left:10px; margin-top:20px;color:#fff; text-align:center; line-height:38px; font-size:18px;}
+
+
+
+
+.facebook_z{ width:255px; background:#fff; height:70px; padding:5px; margin:5px 0 2px 5px; overflow:hidden; }
+.facebook_zimg{ height:10px; float:left; margin-right:10px; margin-top:2px; }
+.facebook_con{ float:left;padding:5px; }
+.facebook_con p{ font-size:14px; color:#000; font-weight:bolder; height:20px; line-height:20px; margin-bottom:10px;}
+.facebook_con a{ display:block; width:38px; height:20px; }
+.like{ height:36px; line-height:36px; color:#757575; padding:0 15px; font-size:14px;}
+.z_listimg{ padding-left:4px;}
+.z_listimg li{ float:left; margin:0 5px; display:inline;}
+
+.new_server p{ color:#757575; height:20px; line-height:20px;}
+.gd_ad{ width:275px; height:160px; padding:0 0 ; background:#313131; }
+
+
+
+.server_open_plan_calendar{ width:263px;  padding:5px 3px 5px 10px; }
+.server_calendar{ font-family:Arial, Helvetica, sans-serif; color:#fff; font-size: 12px; font-weight:bolder; border:2px solid #88abda; width:256px; padding:5px 0px 5px 3px; }
+.server_calendar tr{ width:259px;}
+.calendar_title th{ text-align:center;}
+.server_calendar tr th{ width:33px; height:33px;  text-align:center; line-height:33px; }
+.day_title td{ color:#59b9f3; }
+.server_calendar tr td { width:32px; height:32px; margin:1px;  text-align:center; line-height:24px; display:inline-block;}
+.server_calendar tr td span{ display:block; width:26px; height:26px; text-align: center;}
+span.server_type_1 , span.server_type_2,span.server_type_5{display:inline-block;  width:26px; height:26px; margin:1px;}
+span.server_type_1{  border:3px solid #f19702; }
+span.server_type_2{border:3px solid #25ac36;}
+span.server_type_5{border:3px solid blueviolet;}
+span.will_open , span.is_open{display:block;  width:26px; height:26px; margin:1px;}
+span.will_open{background:#0d52d4;}
+span.is_open{background:#626262;}
+span.server_width{ width:15px; height:15px;}
+span.server_width_bg{ width:18px; height:18px;}
+.srever_tips_box {width:253px;  padding:10px 10px 10px 12px; }
+.srever_tips_box strong{ float:left; width:120px; height:30px; line-height:30px; color:#fff;}
+.srever_tips_box strong span{ display:inline-block; float:left; margin-right:5px;}
+
+.footerbox{ width:100%; height:250px; background-color:#242424; background-position: center top; background-repeat:no-repeat; padding-top:185px;}
+

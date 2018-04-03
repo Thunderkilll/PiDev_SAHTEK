@@ -1,0 +1,597 @@
+{% extends  "::base.html.twig" %}
+
+{% block body %}
+    <body class="main">
+    <div id="main">
+        <div class="top1">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="top1_inner clearfix">
+                            <div class="top1_inner_bg"></div>
+                            <header><div class="logo_wrapper"><a href="{{ path('Page_Client') }}" class="logo"><img class="llogo" src="{{ asset('bundles/user/images/logoo.jpg') }}" style="width: 112px; height: 40px;"></a>
+                                    <b class="pagename">SAHTEK</b>
+                                </div></header>
+                            <div class="navbar navbar_">
+                                <div class="navbar-inner navbar-inner_">
+                                    <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </a>
+                                    <div class="nav-collapse nav-collapse_ collapse">
+                                        <ul class="nav sf-menu clearfix">
+                                            <li class="active"><a href="{{ path('Page_Client') }}">Home</a></li>
+                                            <li><a href="{{ path('Page_questions') }}">About Us</a></li>
+                                            <li class="sub-menu sub-menu-1"><a href="{{ path('Page_Client') }}">Produits et Médicaments </a>
+                                                <ul>
+                                                    <li><a href="{{ path('Page_Client') }}">Produits</a></li>
+                                                    <li class="sub-menu sub-menu-2"><a href="{{ path('Page_Client') }}">Produits Esthétiques</a>
+                                                        <ul>
+                                                            <li><a href="{{ path('Page_Client') }}">Produits de Soin</a></li>
+                                                            <li><a href="{{ path('Page_Client') }}">Materiel Sportif</a></li>
+                                                            <li><a href="{{ path('Page_Client') }}">Autres</a></li>
+                                                            <li><a href="{{ path('Page_questions') }}">plus D'Information</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub-menu sub-menu-2"><a href="{{ path('user_homepage') }}">Medicaments</a>
+                                                        <ul>
+                                                            <li><a href="{{ path('Page_Client') }}">Plus Demander</a></li>
+                                                            <li><a href="{{ path('Page_Client') }}">Maladies Chroniques</a></li>
+                                                            <li><a href="{{ path('Page_Client') }}">Autres</a></li>
+                                                            <li><a href="{{ path('Page_questions') }}">plus d'information</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{{ path('Page_services') }}">Services</a></li>
+                                            <li><a href="{{ path('Page_questions') }}">Q&A</a></li>
+                                            <li class="sub-menu sub-menu-1"><a href="#">Hopitaux & Pharmacies
+                                                </a>
+                                                <ul>
+                                                    <li><a href="#">Services Hopitaux</a></li>
+                                                    <li><a href="#">Phamacie</a></li>
+                                                    <li><a href="#">Autres</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="sub-menu sub-menu-1"><a href="{{ path('fos_user_profile_show') }}">Profile</a>
+                                                <ul>
+                                                    <li><a href="{{ path('fos_message_inbox') }}">Boite de Réception</a></li>
+                                                    <li><a href="{{ path('fos_message_thread_new') }}">Envoyer</a></li>
+                                                    <li class="sub-menu sub-menu-2"><a href="{{ path('fos_message_sent') }}">Autres</a>
+                                                        <ul>
+                                                            <li><a href="{{ path('fiche_index') }}"><img src="{{ asset('../bundles/user/images/aa2.png') }}" alt="">
+                                                                    Listes des Fiches</a></li>
+                                                            <li><a href="{{ path('fiche_new') }}"><img src="{{ asset('../bundles/user/images/add.png') }}" alt="">
+                                                                    Ajouter Fiche Consultation</a></li>
+
+
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li> <a href="{{ path('fos_user_security_logout') }}">
+                                                   Déconnecter
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_wrapper2">
+            <div class="slider_wrapper">
+                <div id="slider">
+                    <div id="camera_wrap">
+                        <div data-src="{{ asset('bundles/user/images/19771.jpg') }}">
+                            <div class="camera_caption fadeIn">
+
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+                        ---------------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/19801.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix">
+
+                                </div>
+                                0
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+                        -----------------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/658238.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+                        -------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/795887.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+
+                        </div>
+                        -----------------------------------------------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/479378.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix">
+
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+
+                        -----------------------------------------------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/697207.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix">
+
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+                        -----------------------------------------------------------------------------
+                        <div data-src="{{ asset('bundles/user/images/yoga.jpg') }} " style="height: 50px ; width: 50px;">
+                            <div class="camera_caption fadeIn">
+                                <div class="clearfix"></div>
+
+                                <div class="clearfix">
+
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <a href="{{ path('Page_Client') }}" class="button0">lire plus</a>
+                            </div>
+                        </div>
+                        -------------------------------------------------------------------------
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider2">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="slider2_inner clearfix">
+                            <div class="slider2_block1">
+                                <div id="slider3">
+                                    <div class="carousel-box">
+                                        <div class="inner">
+                                            <div class="carousel main">
+                                                <ul>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="{{ path('Page_Client') }}">
+
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner1.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            Communication
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Tu peut contacter ton médecin ici même à partir de notre site web SAHTEK
+                                                                        </div>
+                                                                        <div class="txt3">lire plus</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner2.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            Nos Services
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Dans notre page tu peut chercher et reservé des offres posté par les centres de soin inscrit dans nos site
+                                                                            Si tu ne trouve pas la réponse à vos questions tu peut les ajouter ici...
+                                                                        </div>
+                                                                        <div class="txt3">lire plus</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner2.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            network
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                        </div>
+                                                                        <div class="txt3">read more</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner3.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            storage
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                        </div>
+                                                                        <div class="txt3">read more</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner1.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            Communication
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                        </div>
+                                                                        <div class="txt3">read more</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner2.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            network
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                        </div>
+                                                                        <div class="txt3">read more</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="thumb-carousel">
+                                                            <div class="thumbnail clearfix">
+                                                                <a href="#">
+                                                                    <figure>
+                                                                        <img src="{{ asset('bundles/user/images/banner3.png') }}" alt="">
+                                                                    </figure>
+                                                                    <div class="caption">
+                                                                        <div class="txt1">
+                                                                            storage
+                                                                        </div>
+                                                                        <div class="txt2">
+                                                                            Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                        </div>
+                                                                        <div class="txt3">read more</div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider2_block2">
+                                <div class="slider2_block2_description">
+                                    <div class="txt1">Les meilleurs Services !!</div>
+                                    <div class="txt2">Dans notre site il y a les meilleurs services médicaux.</div>
+                                </div>
+                                <div class="slider2_block2_pag clearfix">
+                                    <a class="prev3" href="#"></a>
+                                    <a class="next3" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banners2">
+            <div class="container">
+                <div class="row">
+                    <div class="span4 banner banner1">
+                        <div class="banner_inner">
+                            <a href="#">
+                                <div class="txt1">powerful mobile solutions</div>
+                                <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                                <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4 banner banner2">
+                        <div class="banner_inner">
+                            <a href="#">
+                                <div class="txt1">premium office equipment</div>
+                                <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                                <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4 banner banner3">
+                        <div class="banner_inner">
+                            <a href="#">
+                                <div class="txt1">mobile services</div>
+                                <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                                <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan1">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="slogan1_inner clearfix">
+                            <div class="row">
+                                <div class="span8">
+                                    <div class="block1">
+                                        <div class="txt1">Pour plus d'information<span>  Contacté Nous : 54120892 </span></div>
+                                        <div class="txt2">Notre services sont connues par l'efficacité et la rapidité n'hésiter pas à appeler en cas d'urgence !</div>
+                                    </div>
+                                </div>
+                                <div class="span4">
+                                    <div class="block2">
+                                        <a href="{{ path('Page_questions') }}" class="button1">Vous avez une question ?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+
+                        <h2> Sujet médicale :<span> Gripe H1N1</span></h2>
+
+                        <p>
+                            <strong>
+                                D'après Jean-Philippe Derenne, chef du service pneumologie de l'hôpital de la Pitié-Salpêtrière,
+                            </strong>
+                        </p>
+                        <p>
+                            « <span>Le virus A/H1N1 ne peut pas être appelé grippe porcine, car c'est une grippe inter-humaine. Il a en fait une structure très originale en trois parties, l'une porcine, la deuxième aviaire, et la troisième humaine.</span> »
+                        </p>
+                        <a href="#" class="button2">savoir plus</a>
+
+
+
+                    </div>
+                    <div class="span4">
+
+                        <h2>Top Sujets </h2>
+
+                        {% for i in article  %}
+
+                            <ul class="ul1">
+                                <li><a href="{{ path('Page_questions') }}">{{ i.titre }} </a></li>
+
+                            </ul>
+
+                        {% endfor %}
+
+                    </div>
+                    <div class="span4">
+
+                        <div class="box1">
+                            <div class="caroufredsel_slider">
+                                <div class="txt1">tester quelque choses</div>
+                                <a class="prev_testimonial" href="#"></a>
+                                <a class="next_testimonial" href="#"></a>
+                                <ul id="caroufredsel" class="clearfix">
+                                    <li>
+                                        <div class="testimonial1">
+                                            <div class="txt1"> our site is the best  </div>
+                                            <div class="txt2">- khaled guesmi, <span>CEO Company</span></div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="testimonial1">
+                                            <div class="txt1">  my work is slowly crushing down</div>
+                                            <div class="txt2">- amir bamba, <span>CEO Company</span></div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="testimonial1">
+                                            <div class="txt1">I'm too stupid to know how to code a button </div>
+                                            <div class="txt2">- Nour Zabataka, <span>not existing </span></div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="follow1">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="follow1_wrapper clearfix">
+                            <div class="follow1_inner clearfix">
+                                <div class="block1">Suivez nous sur nos Réseaux Sociaux </div>
+                                <div class="block2"></div>
+                                <div class="block3">
+                                    <div class="social_wrapper">
+                                        <ul class="social clearfix">
+                                            <li><a href="https://www.facebook.com/Anime-Lovers-504918992916158/" target="_blank"><img src="{{ asset('bundles/user/images/social_ic1.png') }}"></a></li>
+                                            <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic2.png') }}"></a></li>
+                                            <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic3.png') }}"></a></li>
+                                            <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic4.png') }}"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bot1">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="bot1_inner">
+                            <div class="row">
+                                <div class="span3">
+                                    <div class="block_title">information</div>
+
+                                    <ul class="ul0">
+                                        <li><a href="#">titre1</a></li>
+                                        <li><a href="#">titre2</a></li>
+                                        <li><a href="#">titre3</a></li>
+                                        <li><a href="#">titre4</a></li>
+                                        <li><a href="#">titre5</a></li>
+                                        <li><a href="#">titre6</a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span3">
+
+                                    <div class="block_title">support</div>
+
+                                    <ul class="ul0">
+                                        <li><a href="#">titre7</a></li>
+                                        <li><a href="#">titre8</a></li>
+                                        <li><a href="#">titre9</a></li>
+                                        <li><a href="#">titre10</a></li>
+                                        <li><a href="#">titre11</a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span3">
+
+                                    <div class="block_title">downloads</div>
+
+                                    <ul class="ul0">
+                                        <li><a href="#">titre12</a></li>
+                                        <li><a href="#">titre13</a></li>
+                                        <li><a href="#">titre14</a></li>
+                                        <li><a href="#">titre15</a></li>
+                                        <li><a href="#">titre16</a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="span3">
+
+                                    <div class="block_title">getting started</div>
+
+                                    <div class="phone1">
+                                        <div class="txt1">Have Questions? Call Us:</div>
+                                        <div class="txt2">54120892</div>
+                                    </div>
+
+                                    <ul class="ul0">
+                                        <li><a href="#">Our Location</a></li>
+                                        <li><a href="#">Find an Agent</a></li>
+                                        <li><a href="{{ path('fos_user_security_logout') }}">Déconnecté</a></li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <footer>
+                                <div class="copyright"><a href="#">Privacy policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://gridgum.com/themes/category/free/">Furious Team</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Copyright © 2018. All rights reserved</div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    </body>
+{% endblock %}

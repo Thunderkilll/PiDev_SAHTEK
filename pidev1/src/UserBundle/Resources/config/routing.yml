@@ -1,6 +1,23 @@
+user_fiche:
+    resource: "@UserBundle/Resources/config/routing/fichepatient.yml"
+    prefix:   /fiche
+
 user_homepage:
     path:     /
-    defaults: { _controller: UserBundle:Default:index }
+    defaults: { _controller: UserBundle:NonConnected:index }
+AffQuest:
+    path:     /{idArticle}/affq
+    defaults: { _controller: UserBundle:NonConnected:AffQuest }
+AllQuestions:
+    path:     /questions
+    defaults: { _controller: UserBundle:NonConnected:Questions }
+
+
+
+
+
+
+
 Page_Agent:
     path:     /Page_Agent
     defaults: { _controller: UserBundle:Default:Agent }
@@ -11,23 +28,95 @@ Page_Client:
     path:     /Page_Client
     defaults: { _controller: UserBundle:Default:Client }
 
+
+
+
+
+
+
+
 Page_services:
     path:     /menu_option/services
     defaults: { _controller: UserBundle:Default:Services }
+
 
 Page_produits:
     path:     /menu_option/produits
     defaults: { _controller: UserBundle:Default:Produits }
 
+
+
+
+
 Page_questions:
     path:     /menu_option/Q&A
-    defaults: { _controller: UserBundle:articles:list }
+    defaults: { _controller: UserBundle:Articles:list }
 
 ajout_question:
     path:     /ajoutQuestion
-    defaults: { _controller: UserBundle:articles:ajoutQuestion }
+    defaults: { _controller: UserBundle:Articles:ajoutQuestion }
 
 ajouter_image:
   path: /test
   defaults: { _controller: UserBundle:Default:images }
 
+manager_articles_index:
+    path:     /articles
+    defaults: { _controller: "UserBundle:Articles:index" }
+    methods:  GET
+
+manager_articles_show:
+    path:     /{idArticle}/show
+    defaults: { _controller: "UserBundle:Articles:show" }
+    methods:  GET
+
+manager_articles_new:
+    path:     /new
+    defaults: { _controller: "UserBundle:Articles:new"}
+    methods:  [GET, POST]
+
+manager_articles_edit:
+    path:     /{idArticle}/modier
+    defaults: { _controller: "UserBundle:Articles:edit" }
+    methods:  [GET, POST]
+
+manager_articles_delete:
+    path:     /{idArticle}/delete
+    defaults: { _controller: "UserBundle:Articles:delete" }
+    methods:  DELETE
+
+Affiche_Question:
+    path:     /{idArticle}/affiche
+    defaults: { _controller: "UserBundle:Default:AfficherQuestion" }
+    methods:  GET
+
+
+
+fiche_index:
+    path:     /fiche
+    defaults: { _controller: "UserBundle:FichePatient:index" }
+    methods:  GET
+
+fiche_show:
+    path:     /fiche/{id_fiche}/show
+    defaults: { _controller: "UserBundle:FichePatient:show" }
+    methods:  GET
+
+fiche_new:
+    path:     /fiche/new
+    defaults: { _controller: "UserBundle:FichePatient:new" }
+    methods:  [GET, POST]
+
+fiche_edit:
+    path:     /fiche/{id_fiche}/edit
+    defaults: { _controller: "UserBundle:FichePatient:edit" }
+    methods:  [GET, POST]
+
+fiche_delete:
+    path:     /fiche/{id_fiche}/delete
+    defaults: { _controller: "UserBundle:FichePatient:delete" }
+    methods:  DELETE
+
+medecin_home:
+    path: /Page_med
+    defaults: {  _controller: UserBundle:Medecin:redirect }

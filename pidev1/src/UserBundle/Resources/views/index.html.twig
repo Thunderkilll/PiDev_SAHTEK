@@ -1,6 +1,11 @@
 {% extends  "::base.html.twig" %}
 {% block body %}
+{% block header %}
+
+    {% endblock %}
+
 <body class="main">
+
 <div id="main">
 
     <div class="top1">
@@ -391,10 +396,11 @@
                 <div class="span4">
 
                     <h2>Top Sujets </h2>
-                    {% for i in article  %}
+                    {% for n in 0..3 %}
+
 
                         <ul class="ul1">
-                            <li><a href="{{ path('Page_questions') }}">{{ i.titre }} </a></li>
+                            <li><a href="{{ path('Page_questions') }}">{{ article[n].titre }} </a></li>
 
                         </ul>
 
@@ -465,6 +471,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <div class="bot1">
         <div class="container">
@@ -546,6 +555,8 @@
 
 
 </div>
+
+
 
 </body>
 {% endblock %}

@@ -23,6 +23,7 @@
     <link href="{{ asset('assets/js/iCheck/skins/square/square.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/js/iCheck/skins/square/red.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/js/iCheck/skins/square/blue.css') }}" rel="stylesheet">
+    <script src="{{ asset('bundles/user/ckeditor/ckeditor.js') }}"></script>
 
     <!--dashboard calendar-->
     <link href="{{ asset('assets/css/clndr.css') }}" rel="stylesheet">
@@ -37,11 +38,11 @@
     <!--Sweet Alert-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dist/sweetalert.css') }}">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+
     <script href="{{ asset('assets/js/html5shiv.js') }}"></script>
     <script href="{{ asset('assets/js/respond.min.js') }}"></script>
-    <![endif]-->
+    <!-- Menu de css pour description-->
+
 </head>
 
 <body class="sticky-header">
@@ -52,29 +53,46 @@
 
         <!--logo and iconic logo start-->
         <div class="logo">
-            <a href="#"><img src="{{ asset('assets/images/logo.png') }}"   alt=""></a>
+            <a href="{{ path('Page_Agent') }}"><img src="{{ asset('assets/images/logo.png') }}"   alt=""></a>
         </div>
 
         <div class="logo-icon text-center">
-            <a href="#"><img src="{{ asset('assets/images/logo_icon.png') }}"  alt=""></a>
+            <a href="{{ path('Page_Agent') }}"><img src="{{ asset('assets/images/logo_icon.png') }}"  alt=""></a>
         </div>
         <!--logo and iconic logo end-->
 
         <div class="left-side-inner">
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
-                <li><a href="#"><i class="fa fa-home"></i> <span>Gestion de SAHTEK</span></a>
+                <li><a href="{{ path('Page_Agent') }}"><i class="fa fa-home"></i> <span>Gestion de SAHTEK</span></a>
                 </li>
                 <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Reclamation</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="#">Table de reclamation</a></li>
 
                     </ul></li>
-                <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Utilisateurs</span></a></li>
-                <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Aticles </span></a></li>
-                <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Questions</span></a></li>
+                <li class="nav nav-pills nav-stacked custom-nav"><a href="{{ path('Page_Agent') }}"> <span>Gestion Utilisateurs</span></a></li>
+                <li class="nav nav-pills nav-stacked custom-nav"><a href="#" target="_blank">
+
+                        <span>Gestion Aticles </span></a></li>
+                <li class="nav nav-pills nav-stacked custom-nav"><a href="{{ path('manager_articles_index') }}" target="_self">
+                        <img src="{{ asset('bundles/user/images/article1.png') }}" alt="gestion articles">
+                        <span>Gestion Questions</span></a>
+                <ul>
+                    <a href="{{ path('manager_articles_new') }}">
+                            <img src="{{ asset('bundles/user/images/add.png') }}" alt="">
+                            <span>  ajouter questions</span></a>
+                    <br>
+                    <br>
+                  <a href="{{ path('manager_articles_index') }}">
+                            <img src="{{ asset('bundles/user/images/list1s.png') }}" alt="">
+                            <span>List des questions</span></a>
+                </ul>
+
+                </li>
+
                 <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Médicaments</span></a></li>
-                <li class="nav nav-pills nav-stacked custom-nav fa fa-book"><a href="#"> <span>Gestion Hopitaux </span></a></li>
+                <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Hopitaux </span></a></li>
                 <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Centres de soin</span></a></li>
                 <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Offres</span></a></li>
                 <li class="nav nav-pills nav-stacked custom-nav"><a href="#"> <span>Gestion Produits </span></a></li>
@@ -108,178 +126,45 @@
             <!--notification menu start -->
             <div class="menu-right">
                 <ul class="notification-menu">
+
                     <li>
-                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                            <i class="fa fa-tasks"></i>
-                            <span class="badge">8</span>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown" >
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">menu</span>
+                            <img src="{{ asset('bundles/user/images/m_button_blue.png') }}" alt="">
                         </a>
                         <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">You have 8 pending task</h5>
-                            <ul class="dropdown-list user-list">
+                            <h5 class="title">Menu de Log Out</h5>
+                            <ul class="dropdown-list normal-list">
                                 <li class="new">
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Database update</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
-                                                <span class="">40%</span>
-                                            </div>
-                                        </div>
+                                    <a href="{{ path('fos_user_profile_edit') }}">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Modifier Profil </span>
+
                                     </a>
                                 </li>
                                 <li class="new">
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Dashboard done</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
-                                                <span class="">90%</span>
-                                            </div>
-                                        </div>
+                                    <a href="{{ path('fos_user_profile_show') }}">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">View Profil </span>
+
+                                    </a>
+                                </li>
+                                <li class="new" >
+                                    <a href="{{ path('fos_user_security_logout') }}" >
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">logout </span>
+
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Web Development</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
-                                                <span class="">66% </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Mobile App</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
-                                                <span class="">33% </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="task-info">
-                                            <div>Issues fixed</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                                                <span class="">80% </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">See All Pending Task</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="badge">5</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">You have 5 Mails </h5>
-                            <ul class="dropdown-list normal-list">
-                                <li class="new">
-                                    <a href="">
-                                        <span class="thumb"><img src="{{ asset('assets/images/photos/user1.png') }}" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name"> <span class="badge badge-success">new</span></span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="{{ asset('assets/images/photos/user2.png') }}" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jonathan Smith</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="{{ asset('assets/images/photos/user3.png') }}" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jane Doe</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="{{ asset('assets/images/photos/user4.png') }}" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Mark Henry</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="thumb"><img src="{{ asset('assets/images/photos/user5.png') }}" alt="" /></span>
-                                        <span class="desc">
-                                          <span class="name">Jim Doe</span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">Read All Mails</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="badge">4</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">Notifications</h5>
-                            <ul class="dropdown-list normal-list">
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #1 overloaded.  </span>
-                                        <em class="small">34 mins</em>
-                                    </a>
-                                </li>
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #3 overloaded.  </span>
-                                        <em class="small">1 hrs</em>
-                                    </a>
-                                </li>
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #5 overloaded.  </span>
-                                        <em class="small">4 hrs</em>
-                                    </a>
-                                </li>
-                                <li class="new">
-                                    <a href="">
-                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                        <span class="name">Server #31 overloaded.  </span>
-                                        <em class="small">4 hrs</em>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">See All Notifications</a></li>
+
                             </ul>
                         </div>
                     </li>
                     <li>
                         {% block adminName %}
+
                         {% endblock %}
 
                     </li>
@@ -291,6 +176,7 @@
         </div>
         <!-- header section end-->
 
+
         <!-- page heading start-->
         <div class="page-heading">
             <h3>Bienvenue au tableau de bord de SAHTEK</h3>
@@ -299,20 +185,23 @@
 
         <!--body wrapper start-->
         <div class="wrapper">
-
             {% block content %}
             {% endblock %}
+
 
         </div>
         <!--body wrapper end-->
 
         <!--footer section start-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <footer>
             2018 &copy; Admin page by Khaled Guesmi & Furious Team
         </footer>
         <!--footer section end-->
-
-
     </div>
     <!-- main content end-->
 </section>
@@ -363,6 +252,7 @@
 <script src="{{ asset('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js') }}"></script>
 <script src="{{ asset('http://getbootstrap.com/dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/dist/sweetalert.min.js') }}"></script>
+
 
 </body>
 </html>

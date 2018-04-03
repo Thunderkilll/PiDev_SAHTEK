@@ -1,0 +1,24 @@
+manager_articles_index:
+    path:     /
+    defaults: { _controller: "UserBundle:Articles:index" }
+    methods:  GET
+
+manager_articles_show:
+    path:     /{idArticle}/show
+    defaults: { _controller: "UserBundle:Articles:show" }
+    methods:  GET
+
+manager_articles_new:
+    path:     /new
+    defaults: { _controller: "UserBundle:Articles:new" }
+    methods:  [GET, POST]
+
+manager_articles_edit:
+    path:     /{idArticle}/edit
+    defaults: { _controller: "UserBundle:Articles:edit" }
+    methods:  [GET, POST]
+
+manager_articles_delete:
+    path:     /{idArticle}/delete
+    defaults: { _controller: "UserBundle:Articles:delete" }
+    methods:  DELETE

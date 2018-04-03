@@ -1,0 +1,20 @@
+{% extends ':fichepatient:med_layout.html.twig' %}
+
+{% block content %}
+    <h1>Fiche patient </h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <br>
+    <br>
+    <a href="{{ path('fiche_index') }}" style="font-size: 50px;  font-family: 'Roboto', sans-serif;  text-transform: uppercase; margin-bottom: 30px;"><b><h3>retour</h3></b></a>
+    <br>
+    <br>
+    {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+
+{% endblock %}

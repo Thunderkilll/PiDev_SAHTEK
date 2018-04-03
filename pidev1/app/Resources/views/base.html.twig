@@ -21,12 +21,15 @@
     <script type="text/javascript" src="{{ asset('js/superfish.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('js/jquery.ui.totop.js') }}"></script>
-
     <script type="text/javascript" src="{{ asset('js/camera.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.mobile.customized.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('js/jquery.caroufredsel.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.touchSwipe.min.js') }}"></script>
+
+
+
+
     <script>
         $(document).ready(function() {
             // camera
@@ -130,7 +133,7 @@
         .pagename {
             color: #0d52d4;
             line-height:30px;
-            font-size: 45px;
+            font-size: 33px;
             margin-top: 0;
             margin-bottom: 30px;
             text-transform: uppercase;
@@ -150,13 +153,103 @@
     <link rel="stylesheet" src="{{ asset('css/ie.css') }}" type="text/css" media="screen">
     <![endif]-->
 
+    <style media="screen">
+
+
+        .rapidGuidesBox {
+            display: block;
+            width: 625px;
+            height: 343px;
+
+            top: -320px;
+            left: auto;
+            overflow: hidden;
+        }
+
+
+        #miniRapidGuidesIco{
+            position: absolute;
+            top:0px;
+            left:0px;
+            display: none;
+            cursor:pointer;
+        }
+        #rapidGuidesIco{
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        #rapidGuidesTalkBox{
+            position: absolute;
+            top: 60px;
+            left: 200px;
+            width: 375px;
+            height: 240px;
+            /*width: 0px;
+            height: 0px;*/
+            display: block;
+            overflow: hidden;
+            background: url('../images/rapid_guides_talk_box.png') 0 0 no-repeat;
+            padding: 20px 20px 5px 30px;
+            /*padding: 0px;*/
+        }
+
+        #closeRapidGuidesTalkBox {
+            position: absolute;
+            right: 6px;
+            top:5px;
+            width: 14px;
+            height: 14px;
+            display: block;
+            text-indent: 1000px;
+            background: url('../images/rapid_guides_talk_box_close.png')  0 0 no-repeat;
+        }
+        #closeRapidGuidesTalkBox:hover {
+            background-position: 0 -14px;
+        }
+        #talkContent h1{
+            font-size: 16px;
+            font-weight: bold;
+            color: #830000;
+        }
+        /*#talkContent span {
+         color: #c77405;
+        }*/
+        #talkContent ul{
+            margin-top: 20px;
+        }
+        #talkContent ul li a{
+            font-size: 14px;
+            color:#830000;
+        }
+        #talkContent ul li a:hover{
+            text-decoration: underline;
+        }
+
+        .left{float:left;}
+        .right{float:right;}
+        .clear{clear:both;font-size:1px;width:1px;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}/*ie and firefox1.5 updata */
+        .clearfix:before,.clearfix:after{content:' ';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+        .clearfix:after{clear:both}
+        .clearfix{zoom:1}
+        .body{font:12px/150% corbel,Helvetica,Arial,Helvetica,sans-serif;text-align:center; background:#242424; padding:0; margin:0 auto;}
+        .body > div{text-align:left;margin-right:auto;margin-left:auto;}
+
+    </style>
+
+    {% block javascript %}{% endblock %}
+    {% block css %}{% endblock %}
 </head>
 
 
         {% block body %}
-            {% block header %}  {% endblock %}
+            {% block header %}
+                {% endblock %}
         {% endblock %}
-        {% block javascript %}{% endblock %}
+
+
+
+
 
 
 </html>

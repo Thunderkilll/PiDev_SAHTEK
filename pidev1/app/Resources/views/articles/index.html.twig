@@ -1,0 +1,96 @@
+{% extends ":default:admin.html.twig" %}
+
+{% block content %}
+
+
+ <h1>Liste des Question </h1>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Identifiant: <br /></th>
+            <td></td>
+            <td></td>
+
+            <th>Titre :           </th>
+            <td></td>
+            <td></td>
+            <th>Sujet :       </th>
+
+            <td></td>
+            <td></td>
+
+            <th>Description :</th>
+            <td></td>
+            <td></td>
+
+            <th>Image :</th>
+            <td></td>
+            <td></td>
+
+            <th> Actions :</th>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><a href="{{ path('manager_articles_show', { 'idArticle': article.idArticle }) }}">{{ article.idArticle }}</a></td>
+                <td></td>
+                <td></td>
+
+                <td>{{ article.titre }} <br> </td>
+                <td></td>
+                <td></td>
+                <td>{{ article.subT }} <br> </td>
+               <td></td>
+
+                <td></td>
+                <td>  {{ article.descript|raw }}</td>
+              <td></td>
+              <td></td>
+                <td style="text-align: center"> <img src="{{ asset('upload_images/upload_img/' ~ article.image) }}"   width="150" height="100"></td>
+             <td></td>
+
+                <td></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('manager_articles_show', { 'idArticle': article.idArticle }) }}">Voir en + </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('manager_articles_edit', { 'idArticle': article.idArticle }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        {% endfor %}
+        <div class="">{{ knp_pagination_render(articles) }}</div>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <li>
+            <a href="{{ path('manager_articles_new') }}" style="text-align: center; font-size: 18px;">
+                <img src="{{ asset('bundles/user/images/file1.png') }}" alt="">
+                Ajouter Question ou Réponses</a>
+        </li>
+    </ul>
+    <a href="{{ path('manager_articles_index') }}">Tout les Question ICI </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}
+

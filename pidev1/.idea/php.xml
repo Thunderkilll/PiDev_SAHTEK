@@ -56,6 +56,9 @@
       <path value="$PROJECT_DIR$/vendor/vendor/friendsofsymfony" />
       <path value="$PROJECT_DIR$/vendor/vendor/symfony" />
       <path value="$PROJECT_DIR$/vendor/vendor/fig" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />

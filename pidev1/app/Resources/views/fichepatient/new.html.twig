@@ -1,0 +1,16 @@
+{% extends ':fichepatient:med_layout.html.twig' %}
+
+{% block content %}
+    <h1>Remplir Nouvelle Fiche</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Enregistrer" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_index') }}">Vers liste des Fiches</a>
+        </li>
+    </ul>
+{% endblock %}

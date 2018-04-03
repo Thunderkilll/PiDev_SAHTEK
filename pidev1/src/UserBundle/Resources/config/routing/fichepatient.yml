@@ -1,0 +1,24 @@
+fiche_index:
+    path:     /
+    defaults: { _controller: "UserBundle:FichePatient:index" }
+    methods:  GET
+
+fiche_show:
+    path:     /{id_fiche}/show
+    defaults: { _controller: "UserBundle:FichePatient:show" }
+    methods:  GET
+
+fiche_new:
+    path:     /new
+    defaults: { _controller: "UserBundle:FichePatient:new" }
+    methods:  [GET, POST]
+
+fiche_edit:
+    path:     /{id_fiche}/edit
+    defaults: { _controller: "UserBundle:FichePatient:edit" }
+    methods:  [GET, POST]
+
+fiche_delete:
+    path:     /{id_fiche}/delete
+    defaults: { _controller: "UserBundle:FichePatient:delete" }
+    methods:  DELETE

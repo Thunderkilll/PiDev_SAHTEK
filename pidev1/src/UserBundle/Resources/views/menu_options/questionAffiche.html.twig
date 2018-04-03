@@ -1,0 +1,34 @@
+{% extends  "::layout.html.twig" %}
+
+    {% block content %}
+
+            <h1>{{ article.titre }}</h1>
+
+            <table>
+                <tbody>
+                <tr>
+
+                    <td style="text-align: center"> <img src="{{ asset('upload_images/upload_img/' ~ article.image) }}"   width="250" height="250"></td>
+                </tr>
+
+
+                <tr>
+                    <th>Subt</th>
+                    <td>{{ article.subT }}</td>
+                </tr>
+                <tr>
+                    <th>Descript</th>
+                    <td>{{ article.descript | raw }}</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <ul>
+                <li>
+                    <a href="{{ path('Page_questions') }}">Retour aux Questions</a>
+                </li>
+
+
+            </ul>
+        {% endblock %}

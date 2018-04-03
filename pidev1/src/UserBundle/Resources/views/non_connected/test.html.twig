@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="icon" href="{{ asset('bundles/user/images/furious2.1.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset ('css/bootstrap.css') }}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.css') }}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ asset('css/camera.css') }}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="screen">
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/superfish.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.ui.totop.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/camera.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.mobile.customized.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('js/jquery.caroufredsel.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.touchSwipe.min.js') }}"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // camera
+            $('#camera_wrap').camera({
+                //thumbnails: true
+                autoAdvance			: true,
+                mobileAutoAdvance	: true,
+                height: '47%',
+                hover: false,
+                loader: 'none',
+                navigation: false,
+                navigationHover: false,
+                mobileNavHover: false,
+                playPause: false,
+                pauseOnClick: false,
+                pagination			: true,
+                time: 7000,
+                transPeriod: 1000,
+                minHeight: '400px'
+            });
+
+            //	carouFredSel
+            $('#slider3').find('.carousel.main ul').carouFredSel({
+                auto: {
+                    timeoutDuration: 8000
+                },
+                responsive: true,
+                prev: '.prev3',
+                next: '.next3',
+                width: '100%',
+                scroll: {
+                    items: 1,
+                    duration: 1000,
+                    easing: "easeOutExpo"
+                },
+                items: {
+                    width: '350',
+                    height: 'variable',	//	optionally resize item-height
+                    visible: {
+                        min: 1,
+                        max: 3
+                    }
+                },
+                mousewheel: false,
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                }
+            });
+            $(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+            function updateSizes_vat(){
+                $('#slider3').find('.carousel.main ul').trigger("updateSizes");
+            }
+            updateSizes_vat();
+
+            // carufredsel testimonials
+            $('#caroufredsel').carouFredSel({
+                auto: {
+                    timeoutDuration: 9000
+                },
+                responsive: true,
+                direction:	"left",
+                prev: '.prev_testimonial',
+                next: '.next_testimonial',
+                width: '100%',
+                scroll: {
+                    items: 1,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    fx: "fade"
+                },
+                items: {
+                    width: '1000',
+                    height: 'variable',	//	optionally resize item-height
+                    visible: {
+                        min: 1,
+                        max: 1
+                    }
+                },
+                mousewheel: false,
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                }
+
+
+
+            });
+
+
+
+
+
+        }); //
+        $(window).load(function() {
+            //
+
+        }); //
+    </script>
+    <style type="text/css">
+        .pagename {
+            color: #0d52d4;
+            line-height:30px;
+            font-size: 33px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+
+        }
+    </style>
+    <!--[if lt IE 8]>
+    <div style='text-align:center'><a href="https://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode">
+        <img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" alt=""/></a></div>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+
+    </script>
+    <link rel="stylesheet" src="{{ asset('css/ie.css') }}" type="text/css" media="screen">
+    <![endif]-->
+    <style media="screen">
+
+
+        .rapidGuidesBox {
+            display: block;
+            width: 625px;
+            height: 343px;
+
+            top: -320px;
+            left: auto;
+            overflow: hidden;
+        }
+
+
+        #miniRapidGuidesIco{
+            position: absolute;
+            top:0px;
+            left:0px;
+            display: none;
+            cursor:pointer;
+        }
+        #rapidGuidesIco{
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        #rapidGuidesTalkBox{
+            position: absolute;
+            top: 60px;
+            left: 200px;
+            width: 375px;
+            height: 240px;
+            /*width: 0px;
+            height: 0px;*/
+            display: block;
+            overflow: hidden;
+            background: url('../images/rapid_guides_talk_box.png') 0 0 no-repeat;
+            padding: 20px 20px 5px 30px;
+            /*padding: 0px;*/
+        }
+
+        #closeRapidGuidesTalkBox {
+            position: absolute;
+            right: 6px;
+            top:5px;
+            width: 14px;
+            height: 14px;
+            display: block;
+            text-indent: 1000px;
+            background: url('../images/rapid_guides_talk_box_close.png')  0 0 no-repeat;
+        }
+        #closeRapidGuidesTalkBox:hover {
+            background-position: 0 -14px;
+        }
+        #talkContent h1{
+            font-size: 16px;
+            font-weight: bold;
+            color: #830000;
+        }
+        /*#talkContent span {
+         color: #c77405;
+        }*/
+        #talkContent ul{
+            margin-top: 20px;
+        }
+        #talkContent ul li a{
+            font-size: 14px;
+            color:#830000;
+        }
+        #talkContent ul li a:hover{
+            text-decoration: underline;
+        }
+
+        .left{float:left;}
+        .right{float:right;}
+        .clear{clear:both;font-size:1px;width:1px;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}/*ie and firefox1.5 updata */
+        .clearfix:before,.clearfix:after{content:' ';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+        .clearfix:after{clear:both}
+        .clearfix{zoom:1}
+        .body{font:12px/150% corbel,Helvetica,Arial,Helvetica,sans-serif;text-align:center; background:#242424; padding:0; margin:0 auto;}
+        .body > div{text-align:left;margin-right:auto;margin-left:auto;}
+      .body{  a{outline-style:none;text-decoration:none; color:#292929;}
+        a:focus { outline: 0; }
+        a:hover {color:#292929}
+        div,form,ol,li,span,ul,dl,dt,dd{ margin:0; padding:0; border:0; text-align:left;}
+        img,a img,p{border:0;margin:0;padding:0;}
+        h1,h2,h3,h4,h5,h6{margin:0;padding:0; font-weight:normal; font-size:12px;}
+        ul,ol,li {list-style:none;text-align:left;}
+        fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td { margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline; }
+        img{vertical-align:top;}
+        }
+    </style>
+
+</head>
+
+
+<body class="main">
+<div class="body">
+
+<div class="rapidGuidesBox" showstatus="mini" style="left: 1259px; opacity: 1; top: 306px; width: 625px; height: 340px;">
+    <img src="{{ asset('images/mini_rapid_guides_ico.png') }}" id="miniRapidGuidesIco" style="display: inline;">
+    <img src="{{ asset('images/rapid_guides_ico.png') }}" id="rapidGuidesIco" style="opacity: 1; display: none;">
+    <div id="rapidGuidesTalkBox" style="display: none;">
+        <a href="javascript:void(0)" id="closeRapidGuidesTalkBox"> fermer</a>
+        <div id="talkContent" style="width: 100%;height: 100%">
+            <h1>Bienvenue au Tuorial du site  par Furious Team</h1>
+            <ul>
+                <ul style="list-style-type: none;" class=" list-paddingleft-2"><li><h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);">
+                            <a href="#" target="_blank" style="font-family: sans-serif; text-decoration: underline; border: none;"></a></h2></li><li><h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);">
+                        </h2></li><li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);">
+                            <a href="#" target="_blank" style="font-family: sans-serif; text-decoration: underline; border: none;"></a></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);">
+                            <a href="#" target="_blank" style="font-family: sans-serif; text-decoration: underline; border: none;"></a></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li><li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                    <li>
+                        <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2></li>
+                </ul>
+                <h2 class="mbn" style="word-wrap: break-word; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; font-size: 1em; color: rgb(68, 68, 68); font-family: Tahoma, Helvetica, SimSun, sans-serif; line-height: 18px; white-space: normal; margin-bottom: 5px !important; background-color: rgb(255, 255, 255);"></h2>
+                <p>&nbsp;&nbsp;<a href="{{ path('AllQuestions') }}" target="_blank" textvalue="[Important]Ou et Comment je trouve une question que je cherche">[Important]Ou et Comment je trouve une question que je cherche</a></p>
+                <ul style="list-style-type: none;" class=" list-paddingleft-2"><li><p><a href="{{ path('fos_user_registration_register') }}" target="_blank" style="outline-style: none; color: rgb(131, 0, 0); font-size: 15px; font-weight: bold;">Comment crée un compte dans Notre site</a></p></li>
+
+                    <li><p>
+                            <a href="#" target="_blank" style="outline-style: none; color: rgb(131, 0, 0); font-size: 14px;"> Qu'est ce c'est Notre site !!!</a></p></li><li><p><a href="#" target="_blank" style="outline-style: none; color: rgb(131, 0, 0); font-size: 14px;">Plus D'informations !!
+                            </a></p></li>
+                    <li><p><br></p></li></ul><p><br></p>            </ul>
+            <div>
+            </div>
+        </div>
+        <script>
+            var guidesBoxshow;
+            var miniRapidGuidesIco;
+            var rapidGuidesIco;
+            var rapidGuidesTalkBox;
+            var guidesBoxshowInterval;
+            var guidesBoxHeight;
+            var guidesBoxWidth;
+            var talkContent;
+            var defaultGuides;
+            $(document).ready(function() {
+                guidesBoxshow = $('.rapidGuidesBox');
+                miniRapidGuidesIco = $('#miniRapidGuidesIco');
+                rapidGuidesIco = $('#rapidGuidesIco');
+                rapidGuidesTalkBox = $('#rapidGuidesTalkBox');
+                talkContent = $('#talkContent');
+                guidesBoxHeight = guidesBoxshow.height();
+                guidesBoxWidth = guidesBoxshow.width();
+                //defaultGuides = call_guides('');
+                setGuidesBoxLeft();
+                $(window).resize(function() {
+                    window.clearInterval(guidesBoxshowInterval);
+                    guidesBoxshowInterval = setTimeout(setGuidesBoxPosition, 500);
+                });
+                $(document).scroll(function() {
+                    window.clearInterval(guidesBoxshowInterval);
+                    guidesBoxshowInterval = setTimeout(setGuidesBoxPosition, 500);
+                });
+                $("#closeRapidGuidesTalkBox").click(function() {
+                    showGuidesBox('');
+                });
+                $("#miniRapidGuidesIco").click(function() {
+                    showGuidesBox('');
+                });
+                showGuidesBox();
+                //setTimeout(showGuidesBox(), )
+                //showGuidesBox();
+            });
+
+            function setGuidesBoxPosition() {
+                setGuidesBoxLeft();
+                setGuidesBoxTop();
+            }
+
+            function setGuidesBoxLeft() {
+                var windowWidth = $(window).innerWidth();
+                var guidesBoxWidth = guidesBoxshow.width();
+                var guidesBoxshowStatus = guidesBoxshow.attr('showStatus');
+                var scrollLeft = $(document).scrollLeft();
+                if(scrollLeft > 0) {
+                    scrollLeft = scrollLeft;
+                } else {
+                    scrollLeft = 0;
+                }
+                if(guidesBoxshowStatus == "mini") {
+                    guidesBoxshow.css('left', scrollLeft + (windowWidth - 90) + "px");
+                } else {
+                    guidesBoxshow.css('left', scrollLeft + ((windowWidth - guidesBoxWidth) / 2) + "px");
+                }
+            }
+
+            function setGuidesBoxTop() {
+                var guidesBoxshowStatus = guidesBoxshow.attr('showStatus');
+                var windowHeight = $(window).innerHeight();
+                var guidesBoxHeight = guidesBoxshow.height();
+                var scrollTop = $(document).scrollTop();
+                if(scrollTop > 0) {
+                    scrollTop = scrollTop;
+                } else {
+                    scrollTop = 0;
+                }
+                if(guidesBoxshowStatus == "big") {
+                    guidesBoxshow.css('top', scrollTop + ((windowHeight - guidesBoxHeight) / 2) + "px");
+                } else if(guidesBoxshowStatus == "mini") {
+                    guidesBoxshow.css('top', scrollTop + (windowHeight - 120) + "px");
+                }
+            }
+
+            function showGuidesBox(characterName) {
+                var guidesBoxshowStatus = guidesBoxshow.attr('showStatus');
+                var windowHeight = $(window).innerHeight();
+                var windowWidth = $(window).innerWidth();
+                var scrollLeft = $(document).scrollLeft();
+                var scrollTop = $(document).scrollTop();
+                var showName;
+                if(scrollTop > 0) {
+                    scrollTop = scrollTop;
+                } else {
+                    scrollTop = 0;
+                }
+                if(scrollLeft > 0) {
+                    scrollLeft = scrollLeft;
+                } else {
+                    scrollLeft = 0;
+                }
+                if(characterName != '' && characterName != 'undifend') {
+                    //defaultGuides = call_guides(characterName);
+                    talkContent.find('span').html(characterName);
+                }
+
+                if(guidesBoxshowStatus == "hidden") {
+                    rapidGuidesIco.css('opacity', 0);
+                    rapidGuidesIco.animate({
+                        opacity:'1'
+                    },500);
+                    guidesBoxshow.animate({
+                        opacity:'1',
+                        top:scrollTop + ((windowHeight - guidesBoxHeight) / 2) + "px",
+                        left:scrollLeft + ((windowWidth - guidesBoxWidth) / 2)  + "px"
+                    },1000, function() {
+                        rapidGuidesTalkBox.toggle(1000, function() {
+                            guidesBoxshow.attr('showStatus', 'big');
+                        });
+                    });
+                } else if(guidesBoxshowStatus == "big") {
+                    //talkContent.html('');
+                    rapidGuidesTalkBox.toggle(
+                        300, function() {
+                            guidesBoxshow.attr('showStatus', 'mini');
+                            rapidGuidesIco.toggle();
+                            miniRapidGuidesIco.toggle("fast", function() {
+                                guidesBoxshow.css({
+                                    width:'80px',
+                                    height:'80px'
+                                });
+                            });
+                            guidesBoxshow.animate({
+                                left: scrollLeft + (windowWidth - 90) + "px",
+                                top: scrollTop + (windowHeight - 120) + "px"
+                            }, 1000);
+                        });
+                } else if(guidesBoxshowStatus == "mini") {
+                    guidesBoxshow.animate({
+                        top:scrollTop + ((windowHeight - guidesBoxHeight) / 2) + "px",
+                        left: scrollLeft + ((windowWidth - guidesBoxWidth) / 2) + "px"
+                    },1000, function() {
+                        miniRapidGuidesIco.toggle(500, function() {
+                            guidesBoxshow.css({
+                                width:guidesBoxWidth,
+                                height:guidesBoxHeight
+                            });
+                            rapidGuidesIco.toggle(1000, function() {
+                                rapidGuidesTalkBox.toggle(1000, function() {
+                                    guidesBoxshow.attr('showStatus', 'big');
+                                });
+                            });
+                        });
+                    });
+                }
+            }
+
+            function call_guides(characterName) {
+                var request_add = "/static_resource/get_guides";
+                $.ajax({
+                    type: "post",
+                    cache:true,
+                    url: request_add,
+                    data: {character_name:characterName},
+                    dataType:"html",
+                    success: function(data){
+                        return data;
+                    }
+                });
+            }
+        </script>
+
+    </div>
+
+</div>
+
+<hr>
+</div>
+<div id="main">
+
+    <div class="top1">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="top1_inner clearfix">
+                        <div class="top1_inner_bg"></div>
+                        <header><div class="logo_wrapper"><a href="{{ path('user_homepage') }}" class="logo"><img class="llogo" src="{{ asset('bundles/user/images/logoo.jpg') }}" style="width: 112px; height: 40px;"></a>
+                                <b class="pagename">SAHTEK</b>
+                            </div></header>
+                        <div class="navbar navbar_">
+                            <div class="navbar-inner navbar-inner_">
+                                <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </a>
+                                <div class="nav-collapse nav-collapse_ collapse">
+                                    <ul class="nav sf-menu clearfix">
+                                        <li class="active"><a href="{{ path('user_homepage') }}">Home</a></li>
+                                        <li><a href="{{ path('AllQuestions') }}">About Us</a></li>
+                                        <li class="sub-menu sub-menu-1"><a href="{{ path('user_homepage') }}">Produits et Médicaments </a>
+                                            <ul>
+                                                <li><a href="{{ path('Page_produits') }}">Produits</a></li>
+                                                <li class="sub-menu sub-menu-2"><a href="{{ path('Page_produits') }}">Produits Esthétiques</a>
+                                                    <ul>
+                                                        <li><a href="{{ path('Page_produits') }}">Produits de Soin</a></li>
+                                                        <li><a href="{{ path('Page_produits') }}">Materiel Sportif</a></li>
+                                                        <li><a href="{{ path('Page_produits') }}">Autres</a></li>
+                                                        <li><a href="{{ path('AllQuestions') }}">plus D'Information</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="sub-menu sub-menu-2"><a href="{{ path('user_homepage') }}">Medicaments</a>
+                                                    <ul>
+                                                        <li><a href="{{ path('user_homepage') }}">Plus Demander</a></li>
+                                                        <li><a href="{{ path('user_homepage') }}">Maladies Chroniques</a></li>
+                                                        <li><a href="{{ path('user_homepage') }}">Autres</a></li>
+                                                        <li><a href="{{ path('user_homepage') }}">plus d'information</a></li>
+
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ path('user_homepage') }}">Services</a></li>
+                                        <li class="sub-menu sub-menu-1"><a href="#">Hopitaux & Pharmacies
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Services Hopitaux</a></li>
+                                                <li><a href="#">Phamacie</a></li>
+                                                <li><a href="#">Autres</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ path('user_homepage') }}">Q&A</a></li>
+                                        <li><a href="{{ 'login' }}">Connexion</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider_wrapper2">
+        <div class="slider_wrapper">
+            <div id="slider">
+                <div id="camera_wrap">
+                    <div data-src="{{ asset('bundles/user/images/19771.jpg') }}">
+                        <div class="camera_caption fadeIn">
+
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+                    ---------------------------------------------
+                    <div data-src="{{ asset('bundles/user/images/19801.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix">
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+
+                    <div data-src="{{ asset('bundles/user/images/658238.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+
+                    <div data-src="{{ asset('bundles/user/images/795887.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+
+                    </div>
+
+                    <div data-src="{{ asset('bundles/user/images/479378.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix">
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+
+
+                    <div data-src="{{ asset('bundles/user/images/697207.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix">
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+
+                    -----------------------------------------------------------------------------
+                    <div data-src="{{ asset('bundles/user/images/yoga.jpg') }} " style="height: 50px ; width: 50px;">
+                        <div class="camera_caption fadeIn">
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix">
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <a href="#" class="button0">lire plus</a>
+                        </div>
+                    </div>
+                    -------------------------------------------------------------------------
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider2">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="slider2_inner clearfix">
+                        <div class="slider2_block1">
+                            <div id="slider3">
+                                <div class="carousel-box">
+                                    <div class="inner">
+                                        <div class="carousel main">
+                                            <ul>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner1.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        Communication
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Tu peut contacter ton médecin ici même à partir de notre site web SAHTEK
+                                                                    </div>
+                                                                    <div class="txt3">lire plus</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner2.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        Nos Services
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Dans notre page tu peut chercher et reservé des offres posté par les centres de soin inscrit dans nos site
+                                                                        Si tu ne trouve pas la réponse à vos questions tu peut les ajouter ici...
+                                                                    </div>
+                                                                    <div class="txt3">lire plus</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner3.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        Offres & Produits
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Dans notre site tu trouvera les meilleurs offres et produits cosmétique et médicales
+                                                                    </div>
+                                                                    <div class="txt3">lire plus</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner1.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        Communication
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Tu peut contacter ton médecin ici même à partir de notre site web SAHTEK
+                                                                        Tu peut nous contacté sur le numéro téléphonique : 54120892 !!!
+                                                                        Appel maintenant n'hésite pas
+                                                                    </div>
+                                                                    <div class="txt3">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner2.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        network
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                    </div>
+                                                                    <div class="txt3">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb-carousel">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+                                                                <figure>
+                                                                    <img src="{{ asset('bundles/user/images/banner3.png') }}" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    <div class="txt1">
+                                                                        storage
+                                                                    </div>
+                                                                    <div class="txt2">
+                                                                        Proin pede eros, pharetra ut, viverra sed, egestas nec, mauris. Nulla tempor fermentum orci.
+                                                                    </div>
+                                                                    <div class="txt3">read more</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider2_block2">
+                            <div class="slider2_block2_description">
+                                <div class="txt1">We provide the best service</div>
+                                <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</div>
+                            </div>
+                            <div class="slider2_block2_pag clearfix">
+                                <a class="prev3" href="#"></a>
+                                <a class="next3" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banners2">
+        <div class="container">
+            <div class="row">
+                <div class="span4 banner banner1">
+                    <div class="banner_inner">
+                        <a href="#">
+                            <div class="txt1">powerful mobile solutions</div>
+                            <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                            <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="span4 banner banner2">
+                    <div class="banner_inner">
+                        <a href="#">
+                            <div class="txt1">premium office equipment</div>
+                            <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                            <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="span4 banner banner3">
+
+                    <div class="banner_inner">
+                        <a href="#">
+                            <div class="txt1">mobile services</div>
+                            <img src="http://via.placeholder.com/370x181" alt="" class="img">
+                            <div class="txt2">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slogan1">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="slogan1_inner clearfix">
+                        <div class="row">
+                            <div class="span8">
+                                <div class="block1">
+                                    <div class="txt1">Pour plus d'information<span>   Contacté Nous : 54120892 </span></div>
+                                    <div class="txt2">Notre services sont connues par l'efficacité et la rapidité n'hésiter pas à appeler en cas d'urgence !</div>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="block2">
+                                    <a href="{{ path('AllQuestions') }}" class="button1">Vous avez une question ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+
+                    <h2> Sujet médicale :<span> Gripe H1N1</span></h2>
+
+                    <p>
+                        <strong>
+                            D'après Jean-Philippe Derenne, chef du service pneumologie de l'hôpital de la Pitié-Salpêtrière,
+                        </strong>
+                    </p>
+                    <p>
+                        « <span>Le virus A/H1N1 ne peut pas être appelé grippe porcine, car c'est une grippe inter-humaine. Il a en fait une structure très originale en trois parties, l'une porcine, la deuxième aviaire, et la troisième humaine.</span> »
+                    </p>
+                    <a href="#" class="button2">savoir plus</a>
+
+
+
+                </div>
+                <div class="span4">
+
+                    <h2>Top Sujets </h2>
+                    {% for n in 0..4 %}
+
+
+                        <ul class="ul1">
+                            <li><a href="{{ path('AffQuest', { 'idArticle': article[n].idArticle }) }}">{{ article[n].titre }} </a></li>
+
+                        </ul>
+
+                    {% endfor %}
+
+                </div>
+                <div class="span4">
+
+                    <div class="box1">
+                        <div class="caroufredsel_slider">
+                            <div class="txt1">tester quelque choses</div>
+                            <a class="prev_testimonial" href="#"></a>
+                            <a class="next_testimonial" href="#"></a>
+                            <ul id="caroufredsel" class="clearfix">
+                                <li>
+                                    <div class="testimonial1">
+                                        <div class="txt1"> our site is the best  </div>
+                                        <div class="txt2">- khaled guesmi, <span>CEO Company</span></div>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="testimonial1">
+                                        <div class="txt1">  my work is slowly crushing down</div>
+                                        <div class="txt2">- amir bamba, <span>CEO Company</span></div>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="testimonial1">
+                                        <div class="txt1">I'm too stupid to know how to code a button </div>
+                                        <div class="txt2">- Nour Zabataka, <span>not existing </span></div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="follow1">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="follow1_wrapper clearfix">
+                        <div class="follow1_inner clearfix">
+                            <div class="block1">Suivez nous sur nos Réseaux Sociaux </div>
+                            <div class="block2"></div>
+                            <div class="block3">
+                                <div class="social_wrapper">
+                                    <ul class="social clearfix">
+                                        <li><a href="https://www.facebook.com/Anime-Lovers-504918992916158/" target="_blank"><img src="{{ asset('bundles/user/images/social_ic1.png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic2.png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic3.png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('bundles/user/images/social_ic4.png') }}"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bot1">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="bot1_inner">
+                        <div class="row">
+                            <div class="span3">
+
+                                <div class="block_title">information</div>
+
+                                <ul class="ul0">
+                                    <li><a href="#">titre1</a></li>
+                                    <li><a href="#">titre2</a></li>
+                                    <li><a href="#">titre3</a></li>
+                                    <li><a href="#">titre4</a></li>
+                                    <li><a href="#">titre5</a></li>
+                                    <li><a href="#">titre6</a></li>
+                                </ul>
+
+                            </div>
+                            <div class="span3">
+
+                                <div class="block_title">support</div>
+
+                                <ul class="ul0">
+                                    <li><a href="#">titre7</a></li>
+                                    <li><a href="#">titre8</a></li>
+                                    <li><a href="#">titre9</a></li>
+                                    <li><a href="#">titre10</a></li>
+                                    <li><a href="#">titre11</a></li>
+                                </ul>
+
+                            </div>
+                            <div class="span3">
+
+                                <div class="block_title">downloads</div>
+
+                                <ul class="ul0">
+                                    <li><a href="#">titre12</a></li>
+                                    <li><a href="#">titre13</a></li>
+                                    <li><a href="#">titre14</a></li>
+                                    <li><a href="#">titre15</a></li>
+                                    <li><a href="#">titre16</a></li>
+                                </ul>
+
+                            </div>
+                            <div class="span3">
+
+                                <div class="block_title">getting started</div>
+
+                                <div class="phone1">
+                                    <div class="txt1">Have Questions? Call Us:</div>
+                                    <div class="txt2">54120892</div>
+                                </div>
+
+                                <ul class="ul0">
+                                    <li><a href="#">Our Location</a></li>
+                                    <li><a href="#">Find an Agent</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <footer>
+                            <div class="copyright"><a href="#">Privacy policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://gridgum.com/themes/category/free/">Furious Team</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Copyright © 2018. All rights reserved</div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+

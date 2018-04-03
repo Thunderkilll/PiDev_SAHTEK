@@ -1,0 +1,10 @@
+{% extends  "::layout.html.twig" %}
+
+{% block content %}
+    <h2>{% trans from 'FOSMessageBundle' %}Boite de Réception{% endtrans %}</h2>
+
+    <a href="{{ url('fos_message_thread_new' )}}">{% trans from 'FOSMessageBundle' %}Nouveau Message{% endtrans %}</a>
+
+    {% include 'FOSMessageBundle:Message:threads_list.html.twig' with {'threads': threads} %}
+
+{% endblock %}

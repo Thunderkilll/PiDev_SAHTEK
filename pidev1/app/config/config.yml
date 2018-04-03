@@ -9,6 +9,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    image_directory: '%kernel.project_dir%/web/upload_images/upload_img'
 
 framework:
     #esi: ~
@@ -79,3 +80,18 @@ fos_user:
    registration:
            form:
                type: FOS\UserBundle\Form\Type\RegistrationFormType
+knp_paginator:
+    page_range: 5
+    default_options:
+        page_name: page
+        sort_field_name: sort
+        sort_direction_name: direction
+        distinct: true
+    template:
+        pagination: 'KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig'
+        sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig'
+
+fos_message:
+    db_driver: orm
+    thread_class: UserBundle\Entity\Thread
+    message_class: UserBundle\Entity\Message

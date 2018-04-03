@@ -40,7 +40,7 @@
 }
 
 #gallerySlider .placeholder{
-	background: url(../images/loader.gif) no-repeat center center;
+	background: url(../bundles/user/images/loader.gif) no-repeat center center;
 	height: 100%;
 	line-height: 1px;
 	text-align: center;
@@ -79,46 +79,48 @@
 /* Firefox Keyframe Animations */
 
 @-moz-keyframes rightSpring{
-	0%{		margin-left:0px;}
+	0%{		margin-left:0;}
 	50%{	margin-left:-30px;}
-	100%{	margin-left:0px;}
+	100%{	margin-left:0;}
 }
 
 @-moz-keyframes leftSpring{
-	0%{		margin-left:0px;}
+	0%{		margin-left:0;}
 	50%{	margin-left:30px;}
-	100%{	margin-left:0px;}
+	100%{	margin-left:0;}
 }
 
 /* Safari and Chrome Keyframe Animations */
 
 @-webkit-keyframes rightSpring{
-	0%{		margin-left:0px;}
+	0%{		margin-left:0;}
 	50%{	margin-left:-30px;}
-	100%{	margin-left:0px;}
+	100%{	margin-left:0;}
 }
 
 @-webkit-keyframes leftSpring{
-	0%{		margin-left:0px;}
+	0%{		margin-left:0;}
 	50%{	margin-left:30px;}
-	100%{	margin-left:0px;}
+	100%{	margin-left:0;}
 }
+
+/* Arrows */
 
 /* Arrows */
 
 #prevArrow,#nextArrow{
 	border:none;
 	text-decoration:none;
-	background:url('../images/arrows.png') no-repeat;
+	background:url('../bundles/user/images/arrows.png') no-repeat;
 	opacity:0.5;
 	cursor:pointer;
 	position:absolute;
 	width:43px;
 	height:58px;
-	
+
 	top:50%;
 	margin-top:-29px;
-	
+
 	-moz-transition:opacity 0.2s ease;
 	-webkit-transition:opacity 0.2s ease;
 	transition:opacity 0.2s ease;

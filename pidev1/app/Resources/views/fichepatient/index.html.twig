@@ -1,0 +1,49 @@
+{% extends ':fichepatient:med_layout.html.twig' %}
+
+{% block content %}
+    <h1>Fichepatients list</h1>
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>Nom patient     </th>
+                <th>Prenom patient  </th>
+                <th>Type de Maladie </th>
+                <th>Traitement</th>
+                <th>Diagnostique</th>
+                <th>Date du Rendez-vous </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for f in fichePatients %}
+            <tr>
+
+                <td>{{ f.nomp }}</td>
+                <td>{{ f.prenomp }}</td>
+                <td>{{ f.maladie }}</td>
+                <td>{{ f.traitement }}</td>
+                <td>{{ f.diagnostique }}</td>
+                <td>{% if f.date %}{{ f.date|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fiche_show', { 'id_fiche': f.getIdFiche() }) }}">plus de détails</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fiche_edit', { 'id_fiche': f.getIdFiche() }) }}">modifier la fiche</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_new') }}">Create a new fichePatient</a>
+        </li>
+    </ul>
+{% endblock %}
